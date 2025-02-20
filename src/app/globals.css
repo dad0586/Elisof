@@ -1,0 +1,65 @@
+/* External CSS imports (after Tailwind directives) */
+@import url('swiper/css');
+@import url('swiper/css/navigation');
+@import url('swiper/css/pagination');
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'MyFont';
+    src: url('/fonts/MyFont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Global styles */
+body {
+    width: 100%;
+    max-width: 1440px;
+    font-family: "Gilroy", sans-serif;
+}
+
+.myContainer {
+    width: 100%;
+    max-width: 1110px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .myContainer {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .myContainer {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .myContainer {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}

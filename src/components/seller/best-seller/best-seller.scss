@@ -1,0 +1,53 @@
+.best-seller_title {
+    font-family: Federo, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    color: rgba(39, 39, 39, 1);
+    padding: 4% 0 2%;
+    margin-bottom: 3%;
+}
+
+.best-seller_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+
+.see-more-btn {
+    display: none; 
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .best-seller_cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .see-more-btn {
+        display: block; 
+    }
+}
+
+@media (max-width: 480px) {
+    .best-seller_title {
+        font-size: 25px;
+    }
+
+    .best-seller_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

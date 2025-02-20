@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+
+  .main-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+
+
+    a {
+      text-decoration: none;
+      font-family: "Gilroy", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #272727;
+      transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+      &:hover {
+        color: #0070f3;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .right-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .language-selector {
+    select {
+      padding: 5px 10px;
+      border: none;
+      background: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+
+
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: #272727;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .close-icon {
+      font-size: 24px;
+      color: #272727;
+      z-index: 1000;
+    }
+  }
+}
+
+
+.burger-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 7px;
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    font-size: 18px;
+    color: #272727;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #0070f3;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    .navbar {
+      display: none;
+    }
+    .main-logo {
+      width: 80px;
+    }
+    
+    .burger-menu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .burger-dropdown {
+    display: flex;
+  }
+}
