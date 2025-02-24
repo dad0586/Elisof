@@ -2,15 +2,15 @@ import FamouProduct from '@/components/famous-product/famous-product'
 import MySwiper from '@/components/main-swiper/main-swiper'
 import BestSeller from '@/components/seller/best-seller/best-seller'
 import React from 'react'
-import AboutUs from './about/page'
+import AboutUs from '../about/page'
 import TestimonialsCarousel from '@/components/feedback/feedback'
-import NewsPage from './news/page'
+import NewsPage from '../news/page'
 import SendRequest from '@/components/send-request/send-request'
 
 
-const page = () => {
+const Page = () => {
   return (
-    
+
     <>
       <MySwiper />
       <BestSeller />
@@ -18,9 +18,9 @@ const page = () => {
       <AboutUs />
       <TestimonialsCarousel />
       <NewsPage />
-      <SendRequest/>
+      <SendRequest />
     </>
   )
 }
 
-export default page
+export default Page;

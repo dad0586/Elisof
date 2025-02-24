@@ -1,1 +1,0 @@
-// rus eng uzb
