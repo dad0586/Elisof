@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import "./navbar.scss";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
   const [language, setLanguage] = useState("en");
@@ -17,9 +18,10 @@ const Navbar = () => {
     setMenuOpen(false);
     document.body.style.overflow = "auto"; // Link bosilganda menyuni yopish va sahifani normal qilish
   };
+  const t = useTranslations();
 
   return (
-    <div className="myContainer">
+    <header className="myContainer">
       <div className="header">
         {/* Logo */}
         <div className="main-logo">
@@ -47,6 +49,17 @@ const Navbar = () => {
               <option value="en">🇺🇸 EN</option>
               <option value="uz">🇺🇿 UZ</option>
             </select>
+
+            <div>
+              <h1>{t('hello')}</h1>
+              <Link href="/en">
+                <button>🇬🇧 (English)</button>
+              </Link>
+              <Link href="/uz">
+                <button>🇺🇿  (O‘zbekcha)</button>
+              </Link>
+            </div>
+
           </div>
 
           {/* Burger Menu */}
@@ -73,7 +86,7 @@ const Navbar = () => {
           </nav>
         </div>
       )}
-    </div>
+    </header>
   );
 };
 

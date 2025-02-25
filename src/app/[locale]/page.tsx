@@ -1,14 +1,20 @@
+'use client';
+
 import FamouProduct from '@/components/famous-product/famous-product'
 import MySwiper from '@/components/main-swiper/main-swiper'
 import BestSeller from '@/components/seller/best-seller/best-seller'
 import React from 'react'
-import AboutUs from '../about/page'
-import TestimonialsCarousel from '@/components/feedback/feedback'
-import NewsPage from '../news/page'
+import AboutUs from '../../components/about/page'
+import NewsPage from '../../components/news/page'
 import SendRequest from '@/components/send-request/send-request'
+import Link from 'next/link'
+import FeedbackCustmer from '@/components/feedback/feedback';
+
 
 
 const Page = () => {
+
+  
   return (
 
     <>
@@ -16,7 +22,7 @@ const Page = () => {
       <BestSeller />
       <FamouProduct />
       <AboutUs />
-      <TestimonialsCarousel />
+      <FeedbackCustmer />
       <NewsPage />
       <SendRequest />
     </>
