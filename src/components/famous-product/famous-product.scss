@@ -2,11 +2,11 @@
     background-image: url('/image bkg.png');
     background-size: cover;
     background-position: center;
-    margin-left: 10%;
+    margin-left: 12%;
     margin-top: 5%;
     padding: 50px 60px;
     border-radius: 377px 0 0 377px;
-    height: 70vh;
+    height: 494px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,13 +92,24 @@
     opacity: 0.8;
 }
 
+@media (min-width: 1800px) {
+    .famous-product{
+        height: auto;
+        margin-left: auto;
+        border-radius: 0;
+    }
+}
 
 @media (max-width: 1024px) {
     .famous-product {
         height: auto;
-        margin-left: 0;
+        margin-left: auto;
         border-radius: 20px;
         padding: 40px;
+        // margin-left: 10%;
+    }
+    .famous-product_about_title {
+        text-align: center;
     }
 
     .famous-product_main {

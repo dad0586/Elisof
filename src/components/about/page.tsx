@@ -27,45 +27,47 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="myContainer">
-        <div className="about-container">
-          <h2>About us</h2>
-          <div className="content">
-            <div className="text-section">
-              <h3>ELISOF</h3>
-              <p>
-                Elisof is a global export-import company specializing in clothing
-                and textiles. It sources, manufactures, and distributes high-quality
-                apparel worldwide, ensuring premium fabrics, ethical production, and
-                seamless logistics.
-              </p>
-            </div>
-
-
-            <div className="image-slider">
-              <Slider {...settings}>
-                {images.map((src, index) => (
-                  <div key={index}>
-                    <Image src={src} alt={`Slide ${index + 1}`} width={600} height={320} />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-          </div>
-
-          <div className="mini-img_contern">
-            {images.map((src, index) => (
-              <div key={index} className="mini-img_contern_x">
-                <Image src={src} alt={`Thumbnail ${index + 1}`} width={80} height={80} />
+      <section>
+        <div className="myContainer">
+          <div className="about-container">
+            <h2>About us</h2>
+            <div className="content">
+              <div className="text-section">
+                <h3>ELISOF</h3>
+                <p>
+                  Elisof is a global export-import company specializing in clothing
+                  and textiles. It sources, manufactures, and distributes high-quality
+                  apparel worldwide, ensuring premium fabrics, ethical production, and
+                  seamless logistics.
+                </p>
               </div>
-            ))}
-          </div>
 
-          <div className="about-contactUs_btn">
-            <ContactUs />
+
+              <div className="image-slider">
+                <Slider {...settings}>
+                  {images.map((src, index) => (
+                    <div key={index}>
+                      <Image src={src} alt={`Slide ${index + 1}`} width={600} height={320} />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+
+            <div className="mini-img_contern">
+              {images.map((src, index) => (
+                <div key={index} className="mini-img_contern_x">
+                  <Image src={src} alt={`Thumbnail ${index + 1}`} width={80} height={80} />
+                </div>
+              ))}
+            </div>
+
+            <div className="about-contactUs_btn">
+              <ContactUs />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

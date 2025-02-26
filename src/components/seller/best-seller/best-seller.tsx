@@ -13,7 +13,7 @@ const BestSeller = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
-        checkScreenSize(); 
+        checkScreenSize();
         window.addEventListener("resize", checkScreenSize);
         return () => window.removeEventListener("resize", checkScreenSize);
     }, []);
@@ -22,19 +22,23 @@ const BestSeller = () => {
     const visibleCards = isMobile && !showAll ? cards.slice(0, 3) : cards;
 
     return (
-        <div className="myContainer">
-            <h2 className="best-seller_title">Best Seller Items</h2>
-            <div className="best-seller_cards">
-                {visibleCards.map((_, index) => (
-                    <Card key={index} />
-                ))}
-            </div>
-            {isMobile && (
-                <button className="see-more-btn" onClick={toggleCards}>
-                    {showAll ? "See Less" : "See More"}
-                </button>
-            )}
-        </div>
+        <>
+            <section>
+                <div className="myContainer">
+                    <h2 className="best-seller_title">Best Seller Items</h2>
+                    <div className="best-seller_cards">
+                        {visibleCards.map((_, index) => (
+                            <Card key={index} />
+                        ))}
+                    </div>
+                    {isMobile && (
+                        <button className="see-more-btn" onClick={toggleCards}>
+                            {showAll ? "See Less" : "See More"}
+                        </button>
+                    )}
+                </div>
+            </section>
+        </>
     );
 };
 

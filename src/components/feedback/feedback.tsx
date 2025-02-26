@@ -37,43 +37,45 @@ export default function FeedbackCustmer() {
 
   return (
     <>
-      <div className="myContainer">
-        <div className="feedback">
-          <div className="feedback-header">
-            <div className="feedback-header_text">
-              <h2>Our Customers’ Feedback</h2>
-              <p>Trust our customers</p>
+      <section>
+        <div className="myContainer">
+          <div className="feedback">
+            <div className="feedback-header">
+              <div className="feedback-header_text">
+                <h2>Our Customers’ Feedback</h2>
+                <p>Trust our customers</p>
+              </div>
+              <div className="controls">
+                <button className="feedback-header_previous" onClick={prevSlide}>Previous</button>
+                <button className="feedback-header_next" onClick={nextSlide}>Next</button>
+              </div>
             </div>
-            <div className="controls">
-              <button className="feedback-header_previous" onClick={prevSlide}>Previous</button>
-              <button className="feedback-header_next"  onClick={nextSlide}>Next</button>
-            </div>
-          </div>
 
-          <div className="feedback-carousel">
-            <div
-              className="carousel-track"
-              style={{
-                transform: `translateX(-${currentIndex * cardWidth}px)`,
-              }}
-            >
-              {feedback.map((item, index) => (
-                <div
-                  className={`testimonial-card ${index >= currentIndex && index < currentIndex + visibleCount ? "active" : ""}`}
-                  key={item.id}
-                >
-                  <div className="card-header">
-                    <img src={item.image} alt={item.name} />
-                    <Rate allowHalf defaultValue={item.rating} />
+            <div className="feedback-carousel">
+              <div
+                className="carousel-track"
+                style={{
+                  transform: `translateX(-${currentIndex * cardWidth}px)`,
+                }}
+              >
+                {feedback.map((item, index) => (
+                  <div
+                    className={`testimonial-card ${index >= currentIndex && index < currentIndex + visibleCount ? "active" : ""}`}
+                    key={item.id}
+                  >
+                    <div className="card-header">
+                      <img src={item.image} alt={item.name} />
+                      <Rate allowHalf defaultValue={item.rating} />
+                    </div>
+                    <h3 className="feedback-card_name">{item.name}</h3>
+                    <p className="feedback-card_comment">{item.review}</p>
                   </div>
-                  <h3 className="feedback-card_name">{item.name}</h3>
-                  <p className="feedback-card_comment">{item.review}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

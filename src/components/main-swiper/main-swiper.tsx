@@ -9,52 +9,57 @@ import Image from "next/image";
 
 const MySwiper = () => {
   return (
-    <div className="swiper-container_xxl">
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1}
-        navigation
-        autoplay={{ delay: 3000 }}
-        loop={true}
-      >
-        <SwiperSlide>
-          <div className="main-swiper">
-            <div className="main-swiper_img">
-              <Image
-                src="/image.png" // Static image files should be in the public folder
-                alt="T-shirts"
-                width={600}
-                height={450}
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="main-swiper_text">
-              Get ready for Our <br />
-              stylist shirts
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="main-swiper">
-            <div className="main-swiper_img">
-              <Image
-                src="/image.png"
-                alt="T-shirts"
-                width={600}
-                height={450}
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="main-swiper_text">
-              Get ready for Our <br />
-              stylist shirts
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-      <div className="main-swiper_background"></div>
-    </div>
+    <>
+      <section>
+        <div className="swiper-container_xxl">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            autoplay={{ delay: 3000 }}
+            loop={true}
+          >
+            <SwiperSlide>
+
+              <div className="main-swiper myContainer">
+                <div className="main-swiper_img">
+                  <Image
+                    src="/image.png" // Static image files should be in the public folder
+                    alt="T-shirts"
+                    width={600}
+                    height={450}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="main-swiper_text">
+                  Get ready for Our <br />
+                  stylist shirts
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="main-swiper myContainer">
+                <div className="main-swiper_img">
+                  <Image
+                    src="/image.png"
+                    alt="T-shirts"
+                    width={600}
+                    height={450}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="main-swiper_text">
+                  Get ready for Our <br />
+                  stylist shirts
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="main-swiper_background"></div>
+        </div>
+      </section>
+    </>
   );
 };
 

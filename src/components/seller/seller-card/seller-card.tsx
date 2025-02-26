@@ -1,28 +1,44 @@
-"use client";
 import "./seller-card.scss";
 import Image from "next/image";
+import { useState } from "react";
 
 const Card = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
-    <div className="best-seller-card">
-      <div className="best-seller-card_img">
-        <Image
-          src="/tshirt 2.png"
-          alt="T-shirt green"
-          width={223}
-          height={223}
-          className="product-image"
-        />
-      </div>
-      <div className="best-seller-card_mini_img">
-        <div className="best-seller-card_img_eye">
-          <Image src="/eye.png" alt="View" width={16} height={16} />
+    <div
+      className={`best-seller-card ${isFlipped ? "flipped" : ""}`}
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
+      <div className="card-inner">
+        <div className="card-front">
+          <div className="best-seller-card_img">
+            <Image
+              src="/tshirt 2.png"
+              alt="T-shirt green"
+              width={223}
+              height={223}
+              className="product-image"
+            />
+          </div>
+          <p className="best-seller-card_text">T-shirt green</p>
         </div>
-        <div className="best-seller-card_img_docs">
-          <Image src="/docs.png" alt="Docs" width={16} height={16} />
+        <div className="card-back">
+          <h6>
+            T-shirt green
+          </h6>
+          <p className="best-seller-card_info">
+            Material: Cotton 100%
+          </p>
+          <p className="best-seller-card_info">
+            Available sizes: S; M; L
+          </p>
+          <p className="best-seller-card_info">
+            For: Male and Female
+          </p>
         </div>
       </div>
-      <p className="best-seller-card_text">T-shirt green</p>
     </div>
   );
 };
