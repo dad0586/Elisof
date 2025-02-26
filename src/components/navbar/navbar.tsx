@@ -4,8 +4,12 @@ import Image from "next/image";
 import { useState } from "react";
 import "./navbar.scss";
 import { useTranslations } from "next-intl";
+import Language11 from "../language/lansw";
+import { Locale } from "../../../i18n.configs";
 
-const Navbar = () => {
+
+
+const Navbar = ({ locale }: { locale: Locale }) => {
   const [language, setLanguage] = useState("en");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,21 +50,14 @@ const Navbar = () => {
             <div className="right-side">
               {/* Language Selector */}
               <div className="language-selector">
-                <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+                {/* <select value={language} onChange={(e) => setLanguage(e.target.value)}>
                   <option value="ru">🇷🇺 RU</option>
                   <option value="en">🇺🇸 EN</option>
                   <option value="uz">🇺🇿 UZ</option>
-                </select>
+                </select> */}
 
-                <div>
-                  <h1>{t('hello')}</h1>
-                  <Link href="/en">
-                    <button>🇬🇧 (English)</button>
-                  </Link>
-                  <Link href="/uz">
-                    <button>🇺🇿  (O‘zbekcha)</button>
-                  </Link>
-                </div>
+                <Language11 type="default" locale={locale} />
+
 
               </div>
 
