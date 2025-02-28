@@ -37,7 +37,7 @@ export default function FeedbackCustmer() {
 
   return (
     <>
-      <section>
+      <section id="clients">
         <div className="myContainer">
           <div className="feedback">
             <div className="feedback-header">

@@ -8,7 +8,7 @@ import { CiLocationOn } from "react-icons/ci";
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer" id="footerId">
             <div className="myContainer">
                 <div className="footer-container">
                     <div className="footer-section">

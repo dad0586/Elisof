@@ -23,7 +23,7 @@ const BestSeller = () => {
 
     return (
         <>
-            <section>
+            <section id="product">
                 <div className="myContainer">
                     <h2 className="best-seller_title">Best Seller Items</h2>
                     <div className="best-seller_cards">

@@ -27,7 +27,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <section>
+      <section id="about-us"> {/* ID qo'shildi */}
         <div className="myContainer">
           <div className="about-container">
             <h2>About us</h2>
@@ -41,7 +41,6 @@ const AboutUs = () => {
                   seamless logistics.
                 </p>
               </div>
-
 
               <div className="image-slider">
                 <Slider {...settings}>

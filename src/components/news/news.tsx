@@ -5,7 +5,7 @@ const NewsPage = () => {
 
   return (
     <>
-      <section>
+      <section id="news">
         <div className="myContainer">
           <h3 className="news-cards-title">
             News

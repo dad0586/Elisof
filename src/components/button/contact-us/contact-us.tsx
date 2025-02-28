@@ -1,13 +1,18 @@
-import "./contact-us.scss"
+import "./contact-us.scss";
 
 const ContactUs = () => {
-  return (
-    <div className='contact-us'>
-      <button>
-        Contact us
-      </button>
-    </div>
-  )
-}
+  const handleContactClick = () => {
+    const footerElement = document.getElementById("footerId");
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll qilish
+    }
+  };
 
-export default ContactUs
+  return (
+    <div className="contact-us">
+      <button onClick={handleContactClick}>Contact us</button>
+    </div>
+  );
+};
+
+export default ContactUs;
