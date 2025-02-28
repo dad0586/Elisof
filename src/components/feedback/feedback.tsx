@@ -4,11 +4,11 @@ import { Rate } from 'antd';
 import "./feedback.scss";
 
 const feedback = [
-  { id: 1, name: "Floyd Miles", image: "./feedback1.png", rating: 4.5, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-  { id: 2, name: "Ronald Richards", image: "./feedback1.png", rating: 4, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-  { id: 3, name: "Jane Cooper", image: "./feedback1.png", rating: 2.5, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-  { id: 4, name: "Jacob Jones", image: "./feedback1.png", rating: 3.5, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-  { id: 5, name: "Leslie Alexander", image: "./feedback1.png", rating: 1.8, review: "Eng zo‘r xizmat!" }
+  { id: 1, name: "Floyd Miles", image: "./imgs/feedback1.png", rating: 4.5, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+  { id: 2, name: "Ronald Richards", image: "./imgs/feedback1.png", rating: 4, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+  { id: 3, name: "Jane Cooper", image: "./imgs/feedback1.png", rating: 2.5, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+  { id: 4, name: "Jacob Jones", image: "./imgs/feedback1.png", rating: 3.5, review: "ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+  { id: 5, name: "Leslie Alexander", image: "./imgs/feedback1.png", rating: 1.8, review: "Eng zo‘r xizmat!" }
 ];
 
 export default function FeedbackCustmer() {

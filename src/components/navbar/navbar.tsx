@@ -34,47 +34,18 @@ const Navbar = ({ locale }: { locale: Locale }) => {
   return (
     <>
       <header>
-        <div className="myContainer ">
-          <div className="main-navbar_header">
-            {/* Logo */}
-            <div className="main-logo">
-              <Link href="/" onClick={handleLinkClick}>
-                <Image src="/logo.svg" alt="Logo" width={130} height={100} />
-              </Link>
-            </div>
-
-            {/* Navbar */}
-            <nav className={`navbar ${menuOpen ? "active" : ""}`}>
-              <Link href="/" onClick={handleLinkClick}>Home</Link>
-              <Link href="#product" onClick={handleLinkClick}>Products</Link>
-              <Link href="#about-us" onClick={handleLinkClick}>About us</Link>
-              <Link href="#clients" onClick={handleLinkClick}>Our clients</Link>
-              <Link href="#news" onClick={handleLinkClick}>News</Link>
-              <Link href="#footerId" onClick={handleLinkClick}>Contact us</Link>
-            </nav>
-
-
-            <div className="right-side">
-
-              <div className="language-selector">
-                <LangSwitcher11 type="default" locale={locale}/>
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" >
+          <div className="myContainer ">
+            <div className="main-navbar_header">
+              {/* Logo */}
+              <div className="main-logo">
+                <Link href="/" onClick={handleLinkClick}>
+                  <Image src="/svgs/logo.svg" alt="Logo" width={130} height={100} />
+                </Link>
               </div>
 
-
-              <div className="burger-menu" onClick={handleMenuToggle}>
-                {menuOpen ? <span className="close-icon">x</span> : <>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </>}
-              </div>
-            </div>
-          </div>
-
-
-          {menuOpen && (
-            <div className="burger-dropdown">
-              <nav>
+              {/* Navbar */}
+              <nav className={`navbar ${menuOpen ? "active" : ""}`}>
                 <Link href="/" onClick={handleLinkClick}>Home</Link>
                 <Link href="#product" onClick={handleLinkClick}>Products</Link>
                 <Link href="#about-us" onClick={handleLinkClick}>About us</Link>
@@ -82,8 +53,39 @@ const Navbar = ({ locale }: { locale: Locale }) => {
                 <Link href="#news" onClick={handleLinkClick}>News</Link>
                 <Link href="#footerId" onClick={handleLinkClick}>Contact us</Link>
               </nav>
+
+
+              <div className="right-side">
+
+                <div className="language-selector">
+                  <LangSwitcher11 type="default" locale={locale} />
+                </div>
+
+
+                <div className="burger-menu" onClick={handleMenuToggle}>
+                  {menuOpen ? <span className="close-icon">x</span> : <>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </>}
+                </div>
+              </div>
             </div>
-          )}
+
+
+            {menuOpen && (
+              <div className="burger-dropdown">
+                <nav>
+                  <Link href="/" onClick={handleLinkClick}>Home</Link>
+                  <Link href="#product" onClick={handleLinkClick}>Products</Link>
+                  <Link href="#about-us" onClick={handleLinkClick}>About us</Link>
+                  <Link href="#clients" onClick={handleLinkClick}>Our clients</Link>
+                  <Link href="#news" onClick={handleLinkClick}>News</Link>
+                  <Link href="#footerId" onClick={handleLinkClick}>Contact us</Link>
+                </nav>
+              </div>
+            )}
+          </div>
         </div>
       </header>
     </>

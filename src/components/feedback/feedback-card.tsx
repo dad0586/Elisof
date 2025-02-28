@@ -9,7 +9,7 @@ const FeedbackCard = () => {
     return (
         <div className="feedback-card">
             <div className="feedback-card_people">
-                <Image src="/feedback1.png" alt="Feedback img" width={60} height={60} className="feedback-card_img" />
+                <Image src="/imgs/feedback1.png" alt="Feedback img" width={60} height={60} className="feedback-card_img" />
                 <div className="feedback-card_rating">
                     <Rate allowHalf defaultValue={3.5} />
                 </div>

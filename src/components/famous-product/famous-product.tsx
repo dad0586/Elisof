@@ -3,10 +3,10 @@ import { useState } from "react";
 import ContactUs from "../button/contact-us/contact-us";
 import "./famous-product.scss";
 
-const bs_cards = ["./tshirt2 1.png", "./tshirt 2.png", "./tshirt2 1.png", "./tshirt 2.png"];
+const bs_cards = ["./imgs/tshirt2 1.png", "./imgs/tshirt 2.png", "./imgs/tshirt2 1.png", "./imgs/tshirt 2.png"];
 
 const FamouProduct = () => {
-    const [mainImage, setMainImage] = useState("./tshirt 2.png");
+    const [mainImage, setMainImage] = useState("./imgs/tshirt 2.png");
 
     return (
         <>

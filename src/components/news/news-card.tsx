@@ -5,7 +5,7 @@ const NewsCard = () => {
         <>
             <div className="news-card">
                 <div className="news-card_img">
-                    <img src="./news.png" alt="News img" />
+                    <img src="./imgs/news.png" alt="News img" />
                 </div>
                 <div className="news-card_title">
                     <h4>

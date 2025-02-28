@@ -22,7 +22,7 @@ const SendRequest = () => {
           <h4 className="send-request-description">We will contact soon</h4>
           <div className="send-request-box">
             <div className="send-request-img">
-              <img src="./image.png" alt="Send Request img" />
+              <img src="./imgs/image.png" alt="Send Request img" />
             </div>
             <div className="send-request-inputs">
               <input

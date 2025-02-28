@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  // padding: 15px 0;
 
   .main-logo {
     flex: 1;
@@ -88,7 +88,7 @@
   a {
     display: flex;
     flex-direction: column;
-    text-align:left;
+    text-align: left;
     font-size: 18px;
     color: #272727;
     text-decoration: none;
@@ -102,19 +102,22 @@
 
 
 @media (max-width: 768px) {
-  .header {
+
+  .main-navbar_header {
     .navbar {
       display: none;
     }
+
     .main-logo {
       width: 80px;
     }
-    
+
     .burger-menu {
       display: flex;
       flex-direction: column;
     }
   }
+
 
   .burger-dropdown {
     display: flex;
