@@ -1,5 +1,14 @@
 {
-    "hello": "Rus tili!"
-
+  "navbar": {
+    "home": "Главная",
+    "products": "Продукты",
+    "about_us": "О нас",
+    "clients": "Клиенты",
+    "news": "Новости",
+    "contact_us": "Контакты"
+  },
+  "swiper": {
+    "title": "Приготовьтесь к нашим",
+    "subtitle": "стильным футболкам"
   }
-  
+}

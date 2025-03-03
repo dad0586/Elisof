@@ -1,5 +1,14 @@
 {
-    "hello": "Hello, World!"
-
+  "navbar": {
+    "home": "Home",
+    "products": "Products",
+    "about_us": "About Us",
+    "clients": "Clients",
+    "news": "News",
+    "contact_us": "Contact Us"
+  },
+  "swiper": {
+    "title": "Get ready for Our",
+    "subtitle": "stylist shirts"
   }
-  
+}

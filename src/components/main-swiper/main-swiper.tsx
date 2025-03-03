@@ -1,13 +1,15 @@
 "use client";
 import "./main-swiper.scss";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl"; // Tarjima uchun import
 
-const MySwiper = () => {
+const MySwiper = ({ locale }: { locale: string }) => {
+  const t = useTranslations("swiper");
+
   return (
     <>
       <section>
@@ -22,11 +24,10 @@ const MySwiper = () => {
               loop={true}
             >
               <SwiperSlide>
-
                 <div className="main-swiper myContainer">
                   <div className="main-swiper_img">
                     <Image
-                      src="/image.png" // Static image files should be in the public folder
+                      src="/image.png"
                       alt="T-shirts"
                       width={600}
                       height={450}
@@ -34,11 +35,12 @@ const MySwiper = () => {
                     />
                   </div>
                   <div className="main-swiper_text">
-                    Get ready for Our <br />
-                    stylist shirts
+                    {t("title")} <br /> 
+                    {t("subtitle")}
                   </div>
                 </div>
               </SwiperSlide>
+
               <SwiperSlide>
                 <div className="main-swiper myContainer">
                   <div className="main-swiper_img">
@@ -51,8 +53,8 @@ const MySwiper = () => {
                     />
                   </div>
                   <div className="main-swiper_text">
-                    Get ready for Our <br />
-                    stylist shirts
+                  {t("title")} <br /> 
+                  {t("subtitle")}
                   </div>
                 </div>
               </SwiperSlide>

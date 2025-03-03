@@ -1,5 +1,14 @@
 {
-    "hello": "Salom dunyo!"
-
+  "navbar": {
+    "home": "Bosh sahifa",
+    "products": "Mahsulotlar",
+    "about_us": "Biz haqimizda",
+    "clients": "Mijozlar",
+    "news": "Yangiliklar",
+    "contact_us": "Bog‘lanish"
+  },
+  "swiper": {
+    "title": "Bizning zamonaviy",
+    "subtitle": "futbolkalarimizga ega bo'ling"
   }
-  
+}

@@ -11,9 +11,12 @@
   }
 
   .navbar {
-    flex: 2;
+    flex: 3;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
 
 
     a {
