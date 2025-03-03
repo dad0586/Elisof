@@ -10,5 +10,59 @@
   "swiper": {
     "title": "Get ready for Our",
     "subtitle": "stylist shirts"
+  },
+  "sellerCard": {
+    "product_name": "T-shirt Green",
+    "material": "Material: Cotton 100%",
+    "sizes": "Available sizes: S; M; L",
+    "gender": "For: Male and Female"
+  },
+  "bestSeller": {
+    "title": "Best Seller Items"
+  },
+  "famous-product": {
+    "button": "Famous products",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius."
+  },
+  "ContactUs": {
+    "button": "Contact us"
+  },
+  "About-us": {
+    "section-name": "About us",
+    "title": "ELISOF",
+    "paragraph": "Elisof is a global export-import company specializing in clothing and textiles. It sources, manufactures, and distributes high-quality apparel worldwide, ensuring premium fabrics, ethical production, and seamless logistics."
+  },
+  "feedback-card": {
+    "names": "Floyd Miles",
+    "comment": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia"
+  },
+  
+  "feedback": {
+    "customers-feedback": "Customers' Feedback",
+    "our-trust": "Our customers trust us",
+    "previous": "Previous",
+    "next": "Next",
+    "reviews": [
+      {
+        "name": "Floyd Miles",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Ronald Richards",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Jane Cooper",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Jacob Jones",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Leslie Alexander",
+        "review": "The best service!"
+      }
+    ]
   }
 }

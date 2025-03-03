@@ -10,5 +10,58 @@
   "swiper": {
     "title": "Bizning zamonaviy",
     "subtitle": "futbolkalarimizga ega bo'ling"
+  },
+  "sellerCard": {
+    "product_name": "Yashil futbolka",
+    "material": "Material: 100% paxta",
+    "sizes": "Mavjud o‘lchamlar: S; M; L",
+    "gender": "Kimlar uchun: Erkak va Ayol"
+  },
+  "bestSeller": {
+    "title": "Eng ko'p sotiladigan mahsulotlar"
+  },
+  "famous-product": {
+    "button": "Mashhur mahsulotlar",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius."
+  },
+  "ContactUs": {
+    "button": "Biz bilan bog'lanish"
+  },
+  "About-us": {
+    "section-name": "Biz haqimizda",
+    "title": "ELISOF",
+    "paragraph": "Elisof - kiyim-kechak va to'qimachilikka ixtisoslashgan global eksport-import kompaniyasi. U yuqori sifatli matolarni, axloqiy ishlab chiqarishni va uzluksiz logistikani ta'minlab, butun dunyo bo'ylab yuqori sifatli kiyimlarni manba qiladi, ishlab chiqaradi va tarqatadi."
+  },
+  "feedback-card": {
+    "names": "Floyd Miles",
+    "comment": "Loyiha juda yaxshi ishlangan! Dizayn minimalist va foydalanish uchun qulay. Kod toza va optimallashtirilgan. Biroq, sahifa yuklanish tezligini oshirish uchun ba'zi komponentlarni yaxshiroq optimallashtirish mumkin. Mobil versiya ham yaxshi ishlaydi, ammo responsivlikni yanada yaxshilash foydali bo‘lar edi. Umuman olganda, loyiha yuqori sifatli va foydalanuvchilar uchun qulay."
+  },
+  "feedback": {
+    "customers-feedback": "Mijozlar fikri",
+    "our-trust": "Mijozlar bizga ishonadi",
+    "previous": "Oldingi",
+    "next": "Keyingi",
+    "reviews": [
+      {
+        "name": "Floyd Miles",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Ronald Richards",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Jane Cooper",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Jacob Jones",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Leslie Alexander",
+        "review": "Eng zo‘r xizmat!"
+      }
+    ]
   }
 }

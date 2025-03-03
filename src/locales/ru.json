@@ -10,5 +10,58 @@
   "swiper": {
     "title": "Приготовьтесь к нашим",
     "subtitle": "стильным футболкам"
+  },
+  "sellerCard": {
+    "product_name": "Зеленая футболка",
+    "material": "Материал: 100% хлопок",
+    "sizes": "Доступные размеры: S; M; L",
+    "gender": "Для: Мужчин и женщин"
+  },
+  "bestSeller": {
+    "title": "Самые продаваемые товары"
+  },
+  "famous-product": {
+    "button": "Знаменитые продукты",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius."
+  },
+  "ContactUs": {
+    "button": "Связаться с нами"
+  },
+  "About-us": {
+    "section-name": "О нас",
+    "title": "ЭЛИСОФ",
+    "paragraph": "ЭЛИСОФ — это глобальная экспортно-импортная компания, специализирующаяся на одежде и текстиле. Она закупает, производит и распространяет высококачественную одежду по всему миру, гарантируя премиальные ткани, этичное производство и бесперебойную логистику."
+  },
+  "feedback-card": {
+    "names": "Флойд Майлз",
+    "comment": "Проект выполнен очень хорошо! Дизайн минималистичный и удобный для пользователей. Код чистый и оптимизированный. Однако некоторые компоненты можно улучшить для увеличения скорости загрузки страницы. Мобильная версия работает хорошо, но адаптивность можно сделать еще лучше. В целом, проект качественный и удобный для пользователей."
+  },
+  "feedback": {
+    "customers-feedback": "Отзывы клиентов",
+    "our-trust": "Наши клиенты нам доверяют",
+    "previous": "Предыдущий",
+    "next": "Следующий",
+    "reviews": [
+      {
+        "name": "Floyd Miles",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Ronald Richards",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Jane Cooper",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Jacob Jones",
+        "review": "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      },
+      {
+        "name": "Leslie Alexander",
+        "review": "Лучший сервис!"
+      }
+    ]
   }
 }

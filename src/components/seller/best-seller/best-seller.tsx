@@ -2,11 +2,13 @@
 import { useState, useEffect } from "react";
 import Card from "../seller-card/seller-card";
 import "./best-seller.scss";
+import { useTranslations } from "next-intl";
 
 const BestSeller = () => {
     const cards = Array.from({ length: 8 });
     const [showAll, setShowAll] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const t = useTranslations("bestSeller");
 
     useEffect(() => {
         const checkScreenSize = () => {
@@ -25,7 +27,7 @@ const BestSeller = () => {
         <>
             <section id="product">
                 <div className="myContainer">
-                    <h2 className="best-seller_title">Best Seller Items</h2>
+                    <h2 className="best-seller_title">{t("title")}</h2>
                     <div className="best-seller_cards">
                         {visibleCards.map((_, index) => (
                             <Card key={index} />

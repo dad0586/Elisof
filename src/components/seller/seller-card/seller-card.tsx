@@ -1,9 +1,11 @@
+import { useTranslations } from "next-intl";
 import "./seller-card.scss";
 import Image from "next/image";
 import { useState } from "react";
 
 const Card = () => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const t = useTranslations("sellerCard");
 
   return (
     <div
@@ -16,27 +18,19 @@ const Card = () => {
           <div className="best-seller-card_img">
             <Image
               src="/tshirt 2.png"
-              alt="T-shirt green"
+              alt={t("product_name")}
               width={223}
               height={223}
               className="product-image"
             />
           </div>
-          <p className="best-seller-card_text">T-shirt green</p>
+          <p className="best-seller-card_text">{t("product_name")}</p>
         </div>
         <div className="card-back">
-          <h6>
-            T-shirt green
-          </h6>
-          <p className="best-seller-card_info">
-            Material: Cotton 100%
-          </p>
-          <p className="best-seller-card_info">
-            Available sizes: S; M; L
-          </p>
-          <p className="best-seller-card_info">
-            For: Male and Female
-          </p>
+          <h6>{t("product_name")}</h6>
+          <p className="best-seller-card_info">{t("material")}</p>
+          <p className="best-seller-card_info">{t("sizes")}</p>
+          <p className="best-seller-card_info">{t("gender")}</p>
         </div>
       </div>
     </div>

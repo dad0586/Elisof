@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl"; // Tarjima uchun import
 
-const MySwiper = ({ locale }: { locale: string }) => {
+const MySwiper = () => {
   const t = useTranslations("swiper");
 
   return (

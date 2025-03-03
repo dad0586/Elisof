@@ -4,8 +4,10 @@ import React from 'react';
 import { Rate } from 'antd';
 import Image from 'next/image';
 import './feedback.scss';
+import { useTranslations } from 'next-intl';
 
 const FeedbackCard = () => {
+    const t = useTranslations("feedback-card")
     return (
         <div className="feedback-card">
             <div className="feedback-card_people">
@@ -14,15 +16,8 @@ const FeedbackCard = () => {
                     <Rate allowHalf defaultValue={3.5} />
                 </div>
             </div>
-            <h3 className="feedback-card_name">Floyd Miles</h3>
-            <p className="feedback-card_comment">
-                Amet minim mollit non deserunt ullamco est sit
-                aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud
-                amet. Amet minim mollit non deserunt ullamco
-                est sit aliqua dolor do amet sint. Velit officia
-            </p>
+            <h3 className="feedback-card_name"> {t ("names")} </h3>
+            <p className="feedback-card_comment"> {t ("comment")} </p>
         </div>
     );
 };

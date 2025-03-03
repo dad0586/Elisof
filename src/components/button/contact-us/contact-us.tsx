@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import "./contact-us.scss";
 
 const ContactUs = () => {
+  const t = useTranslations("ContactUs");
   const handleContactClick = () => {
     const footerElement = document.getElementById("footerId");
     if (footerElement) {
@@ -10,7 +12,7 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us">
-      <button onClick={handleContactClick}>Contact us</button>
+      <button className="" onClick={handleContactClick}> {t ("button")} </button>
     </div>
   );
 };
