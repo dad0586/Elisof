@@ -64,5 +64,32 @@
         "review": "The best service!"
       }
     ]
+  },
+  "News": {
+    "title": "News"
+  },
+
+  "SendRequest": {
+    "title": "Send request",
+    "description": "We will contact soon",
+    "name":"Your First and Second name ",
+    "secondname":"Your Last Name",
+    "email":"Your Email Address",
+    "request":"Write your request...",
+    "button": "Send request"
+  },
+  "footer": {
+    "home": "Home",
+    "about_us": "About Us",
+    "products": "Products",
+    "our_client": "Our client",
+    "news": "News",
+    "contact_us": "Contact Us",
+    "follow_us": "Follow us",
+    "instagram": "Instagram",
+    "telegram": "Telegram",
+    "location": "Location",
+    "location_address": "Buyuk Ipak yo‘li, 156B",
+    "footer_bottom": "© Copyright 2025 | Dynamicsoft | All rights reserved."
   }
 }

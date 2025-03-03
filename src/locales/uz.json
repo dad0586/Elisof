@@ -63,5 +63,31 @@
         "review": "Eng zo‘r xizmat!"
       }
     ]
+  },
+  "News": {
+    "title": "Yangiliklar"
+  },
+  "SendRequest": {
+    "title": "So'rov yuborish",
+    "description": "Tez orada bog'lanamiz",
+    "name":"Sizning ismingiz",
+    "secondname":"Sizning familiyangiz",
+    "email":"Sizning email adresingiz",
+    "request":"Arizangizni yozing...",
+    "button": "So'rov yuborish"
+  },
+  "footer": {
+    "home": "Bosh sahifa",
+    "about_us": "Biz haqimizda",
+    "products": "Mahsulotlar",
+    "our_client": "Bizning mijozlar",
+    "news": "Yangiliklar",
+    "contact_us": "Bog‘lanish",
+    "follow_us": "Obuna bo'lish",
+    "instagram": "Instagram",
+    "telegram": "Telegram",
+    "location": "Manzil",
+    "location_address": "Buyuk Ipak yo‘li, 156B",
+    "footer_bottom": "© Copyright 2025 | Dynamicsoft | All rights reserved."
   }
 }

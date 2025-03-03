@@ -1,3 +1,4 @@
+
 import "./news.scss"
 
 const NewsCard = () => {

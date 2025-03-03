@@ -3,14 +3,14 @@
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-
 import { Form, Mentions } from 'antd';
-
 import "./send-request.scss"
+import { useTranslations } from "next-intl";
 
 
 
 const SendRequest = () => {
+  const t = useTranslations("SendRequest");
 
   const [phone, setPhone] = useState("");
 
@@ -18,8 +18,8 @@ const SendRequest = () => {
     <>
       <section>
         <div className="myContainer">
-          <h2 className="send-request-title">Send request</h2>
-          <h4 className="send-request-description">We will contact soon</h4>
+          <h2 className="send-request-title">{t("title")}</h2>
+          <h4 className="send-request-description">{t("description")}</h4>
           <div className="send-request-box">
             <div className="send-request-img">
               <img src="./imgs/image.png" alt="Send Request img" />
@@ -28,18 +28,18 @@ const SendRequest = () => {
               <input
                 type="text"
                 id="name"
-                placeholder="Your First and Second name "
+                placeholder={t("name")}
               />
               <input
                 type="text"
                 id="secondname"
-                placeholder="Your Last Name  "
+                placeholder={t("secondname")}
               />
               <input
                 className="send-request-email"
                 type="email"
                 id="email"
-                placeholder="Your Email Address  "
+                placeholder={t("email")}
               />
               <div>
                 <PhoneInput
@@ -61,9 +61,9 @@ const SendRequest = () => {
               <textarea
                 className="send-request-description"
                 id="description"
-                placeholder="Write your request..."
+                placeholder={t("request")}
               ></textarea>
-              <button>Send request</button>
+              <button>{t("button")}</button>
             </div>
           </div>
         </div >
