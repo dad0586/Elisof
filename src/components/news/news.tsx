@@ -7,13 +7,15 @@ const NewsPage = () => {
 
   return (
     <>
-      <section id="news">
-        <div className="myContainer">
-          <h3 className="news-cards-title"> {t("title")}  </h3>
-          <div className="news-cards">
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
+      <section>
+        <div id="news">
+          <div className="myContainer">
+            <h3 className="news-cards-title"> {t("title")}  </h3>
+            <div className="news-cards">
+              <NewsCard />
+              <NewsCard />
+              <NewsCard />
+            </div>
           </div>
         </div>
       </section>

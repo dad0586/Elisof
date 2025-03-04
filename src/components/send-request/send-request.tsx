@@ -54,7 +54,6 @@ const SendRequest = () => {
                   buttonStyle={{
                     background: "transparent",
                     border: "1px solid rgb(225, 218, 218)",
-                    width: "12%"
                   }}
                 />
               </div>

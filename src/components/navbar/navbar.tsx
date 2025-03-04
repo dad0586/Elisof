@@ -37,7 +37,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
           <div className="main-navbar_header">
             <div className="main-logo">
               <Link href="/" onClick={handleLinkClick}>
-                <Image src="/svgs/logo.svg" alt="Logo" width={130} height={100} />
+                <Image className="main-logo_img" src="/svgs/logo.svg" alt="Logo" width={130} height={100} />
               </Link>
             </div>
 
@@ -55,7 +55,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
                 <LangSwitcher11 type="default" locale={locale} />
               </div>
 
-              <div className="burger-menu" onClick={handleMenuToggle}>
+              <div className="burger-menu md:w-auto" onClick={handleMenuToggle}>
                 {menuOpen ? (
                   <span className="close-icon">x</span>
                 ) : (

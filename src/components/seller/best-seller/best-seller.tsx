@@ -25,19 +25,21 @@ const BestSeller = () => {
 
     return (
         <>
-            <section id="product">
-                <div className="myContainer">
-                    <h2 className="best-seller_title">{t("title")}</h2>
-                    <div className="best-seller_cards">
-                        {visibleCards.map((_, index) => (
-                            <Card key={index} />
-                        ))}
+            <section>
+                <div id="product">
+                    <div className="myContainer">
+                        <h2 className="best-seller_title">{t("title")}</h2>
+                        <div className="best-seller_cards">
+                            {visibleCards.map((_, index) => (
+                                <Card key={index} />
+                            ))}
+                        </div>
+                        {isMobile && (
+                            <button className="see-more-btn" onClick={toggleCards}>
+                                {showAll ? "See Less" : "See More"}
+                            </button>
+                        )}
                     </div>
-                    {isMobile && (
-                        <button className="see-more-btn" onClick={toggleCards}>
-                            {showAll ? "See Less" : "See More"}
-                        </button>
-                    )}
                 </div>
             </section>
         </>

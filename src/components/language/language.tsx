@@ -66,7 +66,7 @@ const LangSwitcher11 = ({
     >
       <div className="cursor-pointer">
         <div className="flex items-center">
-          <Image src={"/svgs/globe.svg"} width={28} height={28} alt="globe" />
+          <img src={"/svgs/globe.svg"}  alt="globe"  className=" md:w-auto" />
           <Image
             src="/svgs/chevron-down.svg"
             width={20}

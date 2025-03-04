@@ -29,37 +29,39 @@ const AboutUs = () => {
 
   return (
     <>
-      <section id="about-us"> {/* ID qo'shildi */}
-        <div className="myContainer">
-          <div className="about-container">
-            <h2>{t("section-name")}</h2>
-            <div className="content">
-              <div className="text-section">
-                <h3>{t ("title")}</h3>
-                <p> {t ("paragraph")} </p>
-              </div>
-
-              <div className="image-slider">
-                <Slider {...settings}>
-                  {images.map((src, index) => (
-                    <div key={index}>
-                      <Image src={src} alt={`Slide ${index + 1}`} width={600} height={320} />
-                    </div>
-                  ))}
-                </Slider>
-              </div>
-            </div>
-
-            <div className="mini-img_contern">
-              {images.map((src, index) => (
-                <div key={index} className="mini-img_contern_x">
-                  <Image src={src} alt={`Thumbnail ${index + 1}`} width={80} height={80} />
+      <section >
+        <div id="about-us">
+          <div className="myContainer">
+            <div className="about-container">
+              <h2>{t("section-name")}</h2>
+              <div className="content">
+                <div className="text-section">
+                  <h3>{t("title")}</h3>
+                  <p> {t("paragraph")} </p>
                 </div>
-              ))}
-            </div>
 
-            <div className="about-contactUs_btn">
-              <ContactUs />
+                <div className="image-slider">
+                  <Slider {...settings}>
+                    {images.map((src, index) => (
+                      <div key={index}>
+                        <Image src={src} alt={`Slide ${index + 1}`} width={600} height={320} />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </div>
+
+              <div className="mini-img_contern">
+                {images.map((src, index) => (
+                  <div key={index} className="mini-img_contern_x">
+                    <Image src={src} alt={`Thumbnail ${index + 1}`} width={80} height={80} />
+                  </div>
+                ))}
+              </div>
+
+              <div className="about-contactUs_btn">
+                <ContactUs />
+              </div>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function FeedbackCustmer() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCount = 2.5;
   const cardWidth = 1110 / visibleCount;
-  const t = useTranslations ("feedback")
+  const t = useTranslations("feedback")
 
 
   const feedback = [
@@ -41,40 +41,42 @@ export default function FeedbackCustmer() {
 
   return (
     <>
-      <section id="clients">
-        <div className="myContainer">
-          <div className="feedback">
-            <div className="feedback-header">
-              <div className="feedback-header_text">
-                <h2> {t ("customers-feedback")} </h2>
-                <p> {t ("our-trust")} </p>
+      <section>
+        <div id="clients">
+          <div className="myContainer">
+            <div className="feedback">
+              <div className="feedback-header">
+                <div className="feedback-header_text">
+                  <h2> {t("customers-feedback")} </h2>
+                  <p> {t("our-trust")} </p>
+                </div>
+                <div className="controls">
+                  <button className="feedback-header_previous" onClick={prevSlide}> {t("previous")} </button>
+                  <button className="feedback-header_next" onClick={nextSlide}>{t("next")}</button>
+                </div>
               </div>
-              <div className="controls">
-                <button className="feedback-header_previous" onClick={prevSlide}> {t("previous")} </button>
-                <button className="feedback-header_next" onClick={nextSlide}>{t("next")}</button>
-              </div>
-            </div>
 
-            <div className="feedback-carousel">
-              <div
-                className="carousel-track"
-                style={{
-                  transform: `translateX(-${currentIndex * cardWidth}px)`,
-                }}
-              >
-                {feedback.map((item, index) => (
-                  <div
-                    className={`testimonial-card ${index >= currentIndex && index < currentIndex + visibleCount ? "active" : ""}`}
-                    key={item.id}
-                  >
-                    <div className="card-header">
-                      <img src={item.image} alt={item.name} />
-                      <Rate allowHalf defaultValue={item.rating} />
+              <div className="feedback-carousel">
+                <div
+                  className="carousel-track"
+                  style={{
+                    transform: `translateX(-${currentIndex * cardWidth}px)`,
+                  }}
+                >
+                  {feedback.map((item, index) => (
+                    <div
+                      className={`testimonial-card ${index >= currentIndex && index < currentIndex + visibleCount ? "active" : ""}`}
+                      key={item.id}
+                    >
+                      <div className="card-header">
+                        <img src={item.image} alt={item.name} />
+                        <Rate allowHalf defaultValue={item.rating} />
+                      </div>
+                      <h3 className="feedback-card_name">{item.name}</h3>
+                      <p className="feedback-card_comment">{item.review}</p>
                     </div>
-                    <h3 className="feedback-card_name">{item.name}</h3>
-                    <p className="feedback-card_comment">{item.review}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
