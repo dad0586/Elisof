@@ -40,6 +40,10 @@
     color: #272727;
     text-align: left;
 }
+.main-swiper_text_button {
+    display: flex;
+    margin-top: 5%;
+}
 
 .main-swiper_background {
     height: 497px;
@@ -71,6 +75,10 @@
         font-size: 40px;
         line-height: 50px;
         text-align: center;
+    }
+    .main-swiper_text_button {
+        margin-top: 3%;
+        justify-content: center;
     }
 
     .main-swiper_background {

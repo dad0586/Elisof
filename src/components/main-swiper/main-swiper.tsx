@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl"; // Tarjima uchun import
+import ContactUs from "../button/contact-us/contact-us";
 
 const MySwiper = () => {
   const t = useTranslations("swiper");
@@ -20,7 +21,7 @@ const MySwiper = () => {
               spaceBetween={20}
               slidesPerView={1}
               navigation
-              autoplay={{ delay: 3000 }}
+              // autoplay={{ delay: 3000 }}
               loop={true}
             >
               <SwiperSlide>
@@ -35,8 +36,11 @@ const MySwiper = () => {
                     />
                   </div>
                   <div className="main-swiper_text">
-                    {t("title")} <br /> 
+                    {t("title")} <br />
                     {t("subtitle")}
+                    <div className="main-swiper_text_button">
+                      <ContactUs />
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
@@ -53,8 +57,11 @@ const MySwiper = () => {
                     />
                   </div>
                   <div className="main-swiper_text">
-                  {t("title")} <br /> 
-                  {t("subtitle")}
+                    {t("title")} <br />
+                    {t("subtitle")}
+                    <div className="main-swiper_text_button">
+                      <ContactUs />
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
