@@ -18,7 +18,7 @@ const SendRequest = () => {
     <>
       <section>
         <div className="myContainer">
-          <h2 className="send-request-title">{t("title")}</h2>
+          <h2 id="request" className="send-request-title">{t("title")}</h2>
           <h4 className="send-request-description">{t("description")}</h4>
           <div className="send-request-box">
             <div className="send-request-img">

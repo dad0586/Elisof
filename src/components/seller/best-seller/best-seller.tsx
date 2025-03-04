@@ -21,14 +21,14 @@ const BestSeller = () => {
     }, []);
 
     const toggleCards = () => setShowAll(prev => !prev);
-    const visibleCards = isMobile && !showAll ? cards.slice(0, 3) : cards;
+    const visibleCards = isMobile && !showAll ? cards.slice(0, 2) : cards;
 
     return (
         <>
             <section>
-                <div id="product">
+                <div>
                     <div className="myContainer">
-                        <h2 className="best-seller_title">{t("title")}</h2>
+                        <h2 id="product" className="best-seller_title">{t("title")}</h2>
                         <div className="best-seller_cards">
                             {visibleCards.map((_, index) => (
                                 <Card key={index} />

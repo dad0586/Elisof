@@ -4,7 +4,7 @@ import "./contact-us.scss";
 const ContactUs = () => {
   const t = useTranslations("ContactUs");
   const handleContactClick = () => {
-    const footerElement = document.getElementById("footerId");
+    const footerElement = document.getElementById("request");
     if (footerElement) {
       footerElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll qilish
     }

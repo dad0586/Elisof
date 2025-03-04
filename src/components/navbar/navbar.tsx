@@ -47,7 +47,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
               <Link href="#about-us" onClick={handleLinkClick}>{t("about_us")}</Link>
               <Link href="#clients" onClick={handleLinkClick}>{t("clients")}</Link>
               <Link href="#news" onClick={handleLinkClick}>{t("news")}</Link>
-              <Link href="#footerId" onClick={handleLinkClick}>{t("contact_us")}</Link>
+              <Link href="#request" onClick={handleLinkClick}>{t("contact_us")}</Link>
             </nav>
 
             <div className="right-side">
@@ -77,7 +77,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
                 <Link href="#about-us" onClick={handleLinkClick}>{t("about_us")}</Link>
                 <Link href="#clients" onClick={handleLinkClick}>{t("clients")}</Link>
                 <Link href="#news" onClick={handleLinkClick}>{t("news")}</Link>
-                <Link href="#footerId" onClick={handleLinkClick}>{t("contact_us")}</Link>
+                <Link href="#request" onClick={handleLinkClick}>{t("contact_us")}</Link>
               </nav>
             </div>
           )}

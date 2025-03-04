@@ -1,4 +1,4 @@
-
+"use client"; 
 import Link from "next/link";
 import "./footer.scss"
 import { LuInstagram } from "react-icons/lu";
@@ -8,7 +8,18 @@ import { CiLocationOn } from "react-icons/ci";
 import { useTranslations } from "next-intl";
 
 const Footer = () => {
+
+
     const t = useTranslations("footer")
+
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+
     return (
         <footer >
             <div className="footer" id="footerId">
@@ -17,15 +28,15 @@ const Footer = () => {
                         <div className="footer-section">
                             <h3>{t("home")}</h3>
                             <ul>
-                                <Link href="#about"> <li>{t("about_us")}</li></Link>
-                                <Link href="#products"> <li>{t("products")}</li></Link>
+                                <li onClick={() => scrollToSection("about-us")}>{t("about_us")}</li>
+                                <li onClick={() => scrollToSection("product")}>{t("products")}</li>
                             </ul>
                         </div>
                         <div className="footer-section">
                             <h3>{t("our_client")}</h3>
                             <ul>
-                                <Link href="#news"> <li>{t("news")}</li></Link>
-                                <Link href="#contacts"> <li>{t("contact_us")}</li></Link>
+                                <li onClick={() => scrollToSection("news")}>{t("news")}</li>
+                                <li onClick={() => scrollToSection("request")}>{t("contact_us")}</li>
                             </ul>
                         </div>
                         <div className="footer-section">

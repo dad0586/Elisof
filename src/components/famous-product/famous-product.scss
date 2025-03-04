@@ -102,10 +102,13 @@
 
 @media (max-width: 1024px) {
     .famous-product {
+        width: 100%;
         height: auto;
-        margin-left: auto;
+        // margin-left: auto;
+        margin: 0;
+        margin-top: 10%;
         border-radius: 20px;
-        padding: 40px;
+        // padding: 40px;
         // margin-left: 10%;
     }
     .famous-product_about_title {
@@ -135,6 +138,7 @@
 @media (max-width: 768px) {
     .famous-product {
         padding: 30px;
+        border-radius: 0;
     }
     .famous-product_about_title {
         width: 90%;

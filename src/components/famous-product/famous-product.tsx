@@ -13,8 +13,6 @@ const FamouProduct = () => {
     return (
         <>
             <section>
-
-                
                 <div className="famous-product">
                     <div className="myContainer">
                         <div className="famous-product_main">

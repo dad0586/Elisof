@@ -1,44 +1,6 @@
-.feedback-card {
-  width: 100%;
-  max-width: 500px;
-  padding: 32px;
-  border: 1.34px solid #d1d5db;
-  border-radius: 5px;
-  background-color: #fff;
-
-  &_people {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
-  &_img {
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-
-  &_name {
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  &_comment {
-    margin-top: 8px;
-    font-size: 14px;
-    color: rgba(19, 50, 64, 1);
-    font-family: Gilroy;
-    font-weight: 400;
-    line-height: 25.67px;
-    letter-spacing: 2%;
-  }
-}
-
 .feedback {
   text-align: center;
-  margin-top: 8% 0 3%;
+  margin: 8% 0 3%;
 }
 
 .feedback-header {
@@ -81,6 +43,13 @@
   border: 0.5px solid rgb(83, 72, 72);
   border-radius: 5px;
   background-color: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Tugmalar uchun silliq o‘tish */
+}
+
+.feedback-header_previous:hover,
+.feedback-header_next:hover {
+  background-color: rgba(29, 81, 71, 0.1); /* Hover effekt */
 }
 
 .feedback-header_next {
@@ -88,35 +57,33 @@
   color: rgba(255, 255, 255, 1);
 }
 
+/* === Carousel Styling === */
 .feedback-carousel {
   width: 100%;
-  max-width: 1110px;
   overflow: hidden;
-  margin: 3% auto;
+  margin: 3% 0 3% 12%;
   position: relative;
+  padding-left: 10%;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.8s ease-in-out;
   gap: 10px;
 }
 
 .testimonial-card {
-  flex: 0 0 calc(100% / 2.5);
+  flex: 0 0 calc(100% / 2.5); /* 2.5 ta karta ko‘rinadi */
   background: #fff;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: left;
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: transform 0.3s ease; /* Kartalar uchun qo‘shimcha effekt */
+}
 
-  &.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Hover effekti kartalar uchun */
+.testimonial-card:hover {
+  transform: scale(1.02); /* Bir oz kattalashadi */
 }
 
 .card-header {
@@ -126,19 +93,22 @@
   img {
     width: 80px;
     height: 80px;
+    border-radius: 50%; /* Rasmlarni yumaloq qilish */
+    object-fit: cover;
   }
 }
 
+/* === Responsive Design === */
 @media (max-width: 1110px) {
   .testimonial-card {
     flex: 0 0 calc(100% / 2);
-    margin: 0;
   }
 }
 
 @media (max-width: 768px) {
   .feedback-carousel {
     width: 90%;
+    padding-left: 5%;
   }
 
   .testimonial-card {
@@ -170,6 +140,7 @@
 @media (max-width: 480px) {
   .feedback-carousel {
     width: 90%;
+    padding-left: 3%;
   }
 
   .feedback-header {
