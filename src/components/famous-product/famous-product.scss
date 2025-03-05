@@ -4,9 +4,9 @@
     background-position: center;
     margin-left: 13%;
     margin-top: 5%;
-    padding: 50px 60px;
+    padding: 50px;
     border-radius: 377px 0 0 377px;
-    height: 494px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,6 @@
 .famous-product_img {
     width: 45%;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     img {
@@ -123,6 +122,8 @@
 
     .famous-product_img {
         width: 80%;
+        justify-content: center;
+        align-items: center;
     }
 
     .famous-product_about {

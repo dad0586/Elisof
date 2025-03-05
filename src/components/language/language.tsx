@@ -78,7 +78,7 @@ const LangSwitcher11 = ({
         className={cn(
           "absolute  z-10 left-auto right-0 top-[30px] transition-all ease-in-out bg-bgColor flex flex-col gap-[6px] rounded-[8px] lg:text-[18px] lg:leading-[140%] text-md overflow-hidden" , 
           {
-            "h-auto bg-white max-h-[130px] px-[25px] py-[8px]": open,
+            "h-auto bg-[rgb(247,247,249)] max-h-[130px] px-[25px] py-[8px]": open,
             "max-h-0 px-[0px] py-[0px]": !open,
             "right-0 top-[30px]": type === "auth",
           }

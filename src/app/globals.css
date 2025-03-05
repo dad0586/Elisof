@@ -33,11 +33,14 @@
 /* Global styles */
 body {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    border: 2px solid rgb(132, 19, 19);
 }
 section {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 .myContainer {
@@ -46,6 +49,7 @@ section {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 20px;
+    /* position: relative; */
 }
 
 @media (max-width: 1024px) {

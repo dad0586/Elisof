@@ -32,7 +32,8 @@ const Navbar = ({ locale }: { locale: Locale }) => {
 
   return (
     <header>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      {/* top-0 left-0 right-0 */}
+      <div className="fixed w-full top-0  z-50 bg-white shadow-md">
         <div className="myContainer">
           <div className="main-navbar_header">
             <div className="main-logo">

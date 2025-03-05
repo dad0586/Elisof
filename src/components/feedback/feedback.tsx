@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 
 export default function FeedbackCustomer() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCount = 2.5; // Bir vaqtda ko‘rinadigan kartalar soni
-  const cardWidth = 1110 / visibleCount; // Har bir kartaning kengligi
+  const visibleCount = 2.5;
+  const cardWidth = 1110 / visibleCount;
   const t = useTranslations("feedback");
 
   const feedback = [
@@ -18,23 +18,23 @@ export default function FeedbackCustomer() {
     { id: 5, name: t("reviews.4.name"), image: "./imgs/feedback1.png", rating: 1.8, review: t("reviews.4.review") },
   ];
 
-  // Kartalarni ikki marta takrorlaymiz, uzluksiz aylanish uchun
+
   const duplicatedFeedback = [...feedback, ...feedback];
 
-  // Avtomatik harakatlanish uchun useEffect
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
         const newIndex = prevIndex + 1;
-        // Agar asl feedback uzunligiga yetib kelsak, boshiga qaytaramiz
+
         if (newIndex >= feedback.length) {
           return 0;
         }
         return newIndex;
       });
-    }, 3000); // Har 3 soniyada bir marta siljiydi (tezlikni o‘zgartirish mumkin)
+    }, 3000);
 
-    return () => clearInterval(interval); // Komponent o‘chirilganda intervalni tozalaymiz
+    return () => clearInterval(interval);
   }, []);
 
   const nextSlide = () => {
@@ -78,25 +78,28 @@ export default function FeedbackCustomer() {
         </div>
       </div>
       <div className="feedback-carousel">
-        <div
-          className="carousel-track"
-          style={{
-            transform: `translateX(-${currentIndex * cardWidth}px)`,
-            transition: "transform 0.8s ease-in-out", // Sekin va chiroyli o‘tish
-          }}
-        >
-          {duplicatedFeedback.map((item, index) => (
-            <div className="testimonial-card" key={`${item.id}-${index}`}>
-              <div className="card-header">
-                <img src={item.image} alt={item.name} />
-                <Rate allowHalf defaultValue={item.rating} />
+        <div className="feedback-carousel1">
+          <div
+            className="carousel-track"
+            style={{
+              transform: `translateX(-${currentIndex * cardWidth}px)`,
+              transition: "transform 1s ease-in-out",
+            }}
+          >
+            {duplicatedFeedback.map((item, index) => (
+              <div className="testimonial-card" key={`${item.id}-${index}`}>
+                <div className="card-header">
+                  <img src={item.image} alt={item.name} />
+                  <Rate allowHalf defaultValue={item.rating} />
+                </div>
+                <h3 className="feedback-card_name">{item.name}</h3>
+                <p className="feedback-card_comment">{item.review}</p>
               </div>
-              <h3 className="feedback-card_name">{item.name}</h3>
-              <p className="feedback-card_comment">{item.review}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+      {/* </div> */}
     </section>
   );
 }

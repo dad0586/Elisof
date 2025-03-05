@@ -14,19 +14,18 @@ interface SliderSettings {
   speed: number;
   slidesToShow: number;
   slidesToScroll: number;
-  autoplay: boolean;
-  autoplaySpeed: number;
+  // autoplay: boolean;
+  // autoplaySpeed: number;
   arrows: boolean;
   beforeChange?: (current: number, next: number) => void;
 }
 
 const images: string[] = [
-  "/tshirt 2.png",
-  "/tshirt2 1.png",
-  "/tshirt 2.png",
-  "/tshirt2 1.png",
-  "/tshirt 2.png",
-  "/tshirt2 1.png",
+  "/svgs/Image.svg",
+  "/svgs/Image (1).svg",
+  "/svgs/Image (2).svg",
+  "/svgs/Image (3).svg",
+  "/svgs/Image (4).svg",
 ];
 
 const AboutUs: React.FC = () => {
@@ -39,7 +38,7 @@ const AboutUs: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
     beforeChange: (current: number, next: number) => {

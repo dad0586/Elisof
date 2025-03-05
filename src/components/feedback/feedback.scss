@@ -44,12 +44,12 @@
   border-radius: 5px;
   background-color: inherit;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Tugmalar uchun silliq o‘tish */
+  transition: background-color 0.3s ease; 
 }
 
 .feedback-header_previous:hover,
 .feedback-header_next:hover {
-  background-color: rgba(29, 81, 71, 0.1); /* Hover effekt */
+  background-color: rgba(29, 81, 71, 0.1);
 }
 
 .feedback-header_next {
@@ -57,14 +57,21 @@
   color: rgba(255, 255, 255, 1);
 }
 
-/* === Carousel Styling === */
+
 .feedback-carousel {
   width: 100%;
-  overflow: hidden;
-  margin: 3% 0 3% 12%;
   position: relative;
-  padding-left: 10%;
+  overflow: hidden;
 }
+.feedback-carousel1 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-left: 13%;
+}
+
+
+
 
 .carousel-track {
   display: flex;
@@ -72,18 +79,18 @@
 }
 
 .testimonial-card {
-  flex: 0 0 calc(100% / 2.5); /* 2.5 ta karta ko‘rinadi */
+  flex: 0 0 calc(100% / 2.5); 
   background: #fff;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: left;
-  transition: transform 0.3s ease; /* Kartalar uchun qo‘shimcha effekt */
+  transition: transform 0.3s ease; 
 }
 
-/* Hover effekti kartalar uchun */
+
 .testimonial-card:hover {
-  transform: scale(1.02); /* Bir oz kattalashadi */
+  transform: scale(1.02);
 }
 
 .card-header {
@@ -93,12 +100,17 @@
   img {
     width: 80px;
     height: 80px;
-    border-radius: 50%; /* Rasmlarni yumaloq qilish */
+    border-radius: 50%; 
     object-fit: cover;
   }
 }
+// @media (min-width: 1500px) {
+//   .feedback-carousel {
 
-/* === Responsive Design === */
+//   }
+// }
+
+
 @media (max-width: 1110px) {
   .testimonial-card {
     flex: 0 0 calc(100% / 2);
@@ -108,11 +120,14 @@
 @media (max-width: 768px) {
   .feedback-carousel {
     width: 90%;
-    padding-left: 5%;
+    // padding-left: 5%;
+  }
+  .feedback-carousel1 {
+    margin: 0;
   }
 
   .testimonial-card {
-    flex: 0 0 100%;
+    flex: 0 0 calc(100% / 1);
   }
 
   .feedback-header {
@@ -140,7 +155,7 @@
 @media (max-width: 480px) {
   .feedback-carousel {
     width: 90%;
-    padding-left: 3%;
+    // padding-left: 3%;
   }
 
   .feedback-header {
