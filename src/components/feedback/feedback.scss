@@ -104,11 +104,7 @@
     object-fit: cover;
   }
 }
-// @media (min-width: 1500px) {
-//   .feedback-carousel {
 
-//   }
-// }
 
 
 @media (max-width: 1110px) {
@@ -120,7 +116,7 @@
 @media (max-width: 768px) {
   .feedback-carousel {
     width: 90%;
-    // padding-left: 5%;
+
   }
   .feedback-carousel1 {
     margin: 0;
@@ -155,7 +151,6 @@
 @media (max-width: 480px) {
   .feedback-carousel {
     width: 90%;
-    // padding-left: 3%;
   }
 
   .feedback-header {

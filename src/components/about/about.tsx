@@ -14,8 +14,8 @@ interface SliderSettings {
   speed: number;
   slidesToShow: number;
   slidesToScroll: number;
-  // autoplay: boolean;
-  // autoplaySpeed: number;
+  autoplay: boolean;
+  autoplaySpeed: number;
   arrows: boolean;
   beforeChange?: (current: number, next: number) => void;
 }
@@ -38,7 +38,7 @@ const AboutUs: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
     beforeChange: (current: number, next: number) => {

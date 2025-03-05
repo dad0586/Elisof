@@ -5,10 +5,11 @@ import "./feedback.scss";
 import { useTranslations } from "next-intl";
 
 export default function FeedbackCustomer() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCount = 2.5;
-  const cardWidth = 1110 / visibleCount;
+  const [offset, setOffset] = useState(0);
+  const [speed, setSpeed] = useState(1);
   const t = useTranslations("feedback");
+  const cardWidth = 1110 ;
+  const baseSpeed = 1; 
 
   const feedback = [
     { id: 1, name: t("reviews.0.name"), image: "./imgs/feedback1.png", rating: 4.5, review: t("reviews.0.review") },
@@ -18,43 +19,47 @@ export default function FeedbackCustomer() {
     { id: 5, name: t("reviews.4.name"), image: "./imgs/feedback1.png", rating: 1.8, review: t("reviews.4.review") },
   ];
 
-
   const duplicatedFeedback = [...feedback, ...feedback];
 
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        const newIndex = prevIndex + 1;
+    const animationFrame = () => {
+      setOffset((prevOffset) => {
+        const newOffset = prevOffset + speed;
+        const totalWidth = feedback.length * cardWidth;
 
-        if (newIndex >= feedback.length) {
-          return 0;
+        if (newOffset >= totalWidth) {
+          return newOffset - totalWidth;
         }
-        return newIndex;
+        return newOffset;
       });
-    }, 3000);
 
-    return () => clearInterval(interval);
+
+      setSpeed((prevSpeed) => {
+        if (prevSpeed < baseSpeed) {
+          return Math.min(prevSpeed + 0.05, baseSpeed); 
+        }
+        return prevSpeed;
+      });
+
+      requestAnimationFrame(animationFrame);
+    };
+
+    const animationId = requestAnimationFrame(animationFrame);
+
+    return () => cancelAnimationFrame(animationId);
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex + 1;
-      if (newIndex >= feedback.length) {
-        return 0;
-      }
-      return newIndex;
-    });
+    setOffset((prevOffset) => prevOffset + cardWidth);
+    setSpeed(0.2); 
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex - 1;
-      if (newIndex < 0) {
-        return feedback.length - 1;
-      }
-      return newIndex;
+    setOffset((prevOffset) => {
+      const newOffset = prevOffset - cardWidth;
+      return newOffset < 0 ? feedback.length * cardWidth + newOffset : newOffset;
     });
+    setSpeed(0.2); 
   };
 
   return (
@@ -82,8 +87,8 @@ export default function FeedbackCustomer() {
           <div
             className="carousel-track"
             style={{
-              transform: `translateX(-${currentIndex * cardWidth}px)`,
-              transition: "transform 1s ease-in-out",
+              transform: `translateX(-${offset}px)`,
+              transition: "none",
             }}
           >
             {duplicatedFeedback.map((item, index) => (
@@ -99,7 +104,6 @@ export default function FeedbackCustomer() {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 }
