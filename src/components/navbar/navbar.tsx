@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -7,10 +7,11 @@ import "./navbar.scss";
 import { useTranslations } from "next-intl";
 import { Locale } from "../../../i18n.configs";
 import LangSwitcher11 from "../language/language";
+import { MdOutlineCancel } from "react-icons/md";
 
 const Navbar = ({ locale }: { locale: Locale }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const t = useTranslations("navbar"); 
+  const t = useTranslations("navbar");
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
@@ -23,7 +24,13 @@ const Navbar = ({ locale }: { locale: Locale }) => {
       e.preventDefault();
       const element = document.querySelector(target);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        const navbarHeight = document.querySelector(".fixed")?.getBoundingClientRect().height || 0;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+        window.scrollTo({
+          top: elementPosition,
+          behavior: "smooth",
+        });
       }
     }
     setMenuOpen(false);
@@ -32,8 +39,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
 
   return (
     <header>
-      {/* top-0 left-0 right-0 */}
-      <div className="fixed w-full top-0  z-50 bg-white shadow-md">
+      <div className="fixed w-full h-auto top-0 z-50 bg-white shadow-md">
         <div className="myContainer">
           <div className="main-navbar_header">
             <div className="main-logo">
@@ -57,9 +63,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
               </div>
 
               <div className="burger-menu md:w-auto" onClick={handleMenuToggle}>
-                {menuOpen ? (
-                  <span className="close-icon">x</span>
-                ) : (
+                {!menuOpen && (
                   <>
                     <span></span>
                     <span></span>
@@ -73,6 +77,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
           {menuOpen && (
             <div className="burger-dropdown">
               <nav>
+                <span className="close-icon" onClick={handleMenuToggle}><MdOutlineCancel /></span>
                 <Link href="/" onClick={handleLinkClick}>{t("home")}</Link>
                 <Link href="#product" onClick={handleLinkClick}>{t("products")}</Link>
                 <Link href="#about-us" onClick={handleLinkClick}>{t("about_us")}</Link>

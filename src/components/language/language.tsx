@@ -39,6 +39,13 @@ const LangSwitcher11 = ({
     router.replace(pathName, { locale: locale });
   };
 
+  // const changeLocale = (locale: Locale) => {
+  //   console.time("localeChange");
+  //   setLang(locale);
+  //   router.replace(pathName, { locale: locale });
+  //   console.timeEnd("localeChange");
+  // };
+
   // For screen readers
   const handleLocaleKeyDown = (
     event: React.KeyboardEvent<HTMLLIElement>,

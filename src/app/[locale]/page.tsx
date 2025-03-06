@@ -23,7 +23,7 @@ const Page = () => {
         <BestSeller />
         <FamouProduct />
         <AboutUs />
-        <FeedbackCustmer />
+        {/* <FeedbackCustmer /> */}
         <NewsPage />
         <SendRequest />
       </main>

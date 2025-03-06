@@ -2,8 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 15px 0;
-  // display: none;
 
   .main-logo {
     flex: 1;
@@ -18,7 +16,6 @@
     align-items: center;
     text-align: center;
     gap: 5px;
-
 
     a {
       text-decoration: none;
@@ -53,7 +50,6 @@
     }
   }
 
-
   .burger-menu {
     display: none;
     cursor: pointer;
@@ -65,15 +61,8 @@
       margin: 5px;
       transition: 0.3s;
     }
-
-    .close-icon {
-      font-size: 24px;
-      color: #272727;
-      z-index: 1000;
-    }
   }
 }
-
 
 .burger-dropdown {
   position: absolute;
@@ -88,6 +77,27 @@
   flex-direction: column;
   gap: 15px;
   z-index: 999;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .close-icon {
+    font-size: 24px;
+    color: #272727;
+    cursor: pointer;
+    text-align: right; 
+    transition: color 0.3s ease-in-out;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+    &:hover {
+      color: #0070f3; 
+    }
+  }
 
   a {
     display: flex;
@@ -104,9 +114,7 @@
   }
 }
 
-
 @media (max-width: 768px) {
-
   .main-navbar_header {
     .navbar {
       display: none;
@@ -121,7 +129,6 @@
       flex-direction: column;
     }
   }
-
 
   .burger-dropdown {
     display: flex;

@@ -35,7 +35,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    border: 2px solid rgb(132, 19, 19);
+    /* border: 2px solid rgb(132, 19, 19); */
 }
 section {
     width: 100%;
@@ -48,7 +48,7 @@ section {
     max-width: 1110px;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
     /* position: relative; */
 }
 
@@ -62,6 +62,7 @@ section {
     .myContainer {
         max-width: 600px;
         margin: 0 auto;
+        padding: 0 20px;
     }
 }
 
@@ -71,3 +72,4 @@ section {
         padding: 0 10px;
     }
 }
+
