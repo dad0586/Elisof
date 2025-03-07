@@ -39,14 +39,7 @@ const LangSwitcher11 = ({
     router.replace(pathName, { locale: locale });
   };
 
-  // const changeLocale = (locale: Locale) => {
-  //   console.time("localeChange");
-  //   setLang(locale);
-  //   router.replace(pathName, { locale: locale });
-  //   console.timeEnd("localeChange");
-  // };
 
-  // For screen readers
   const handleLocaleKeyDown = (
     event: React.KeyboardEvent<HTMLLIElement>,
     locale: Locale
@@ -73,7 +66,13 @@ const LangSwitcher11 = ({
     >
       <div className="cursor-pointer">
         <div className="flex items-center">
-          <img src={"/svgs/globe.svg"}  alt="globe"  className=" md:w-auto" />
+          <Image
+            src="/svgs/globe.svg"
+            width={20}
+            height={20}
+            alt="globe"
+            className="md:w-auto"
+          />
           <Image
             src="/svgs/chevron-down.svg"
             width={20}

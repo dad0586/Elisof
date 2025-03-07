@@ -1,6 +1,6 @@
 
 import createMiddleware from "next-intl/middleware";
-import { locales, Locale } from "../i18n.configs";
+import { locales } from "../i18n.configs";
 
 export default createMiddleware({
     locales: locales as readonly string[],

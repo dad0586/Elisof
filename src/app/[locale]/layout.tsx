@@ -35,12 +35,12 @@ type Props = {
 };
 
 export default async function RootLayout({ children, params: { locale } }: Props) {
-  // locale ni tekshirish
+
   if (!locale || !['en', 'uz', 'ru'].includes(locale)) {
     throw new Error(`Invalid locale: ${locale}. Expected one of: 'en', 'uz', 'ru'`);
   }
 
-  // Xabarlarni yuklash
+
   const messages = await getMessages({ locale });
 
   return (

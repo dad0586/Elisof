@@ -17,7 +17,7 @@ const Card = () => {
         <div className="card-front">
           <div className="best-seller-card_img">
             <Image
-              src="/tshirt 2.png"
+              src="/imgs/tshirt2.png"
               alt={t("product_name")}
               width={223}
               height={223}
