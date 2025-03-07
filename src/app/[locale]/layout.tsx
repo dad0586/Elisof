@@ -9,7 +9,6 @@ import Footer from "@/components/footer/footer";
 import { ReactNode } from "react";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-// import "flowbite/dist/flowbite.css";
 
 
 const geistSans = Geist({
