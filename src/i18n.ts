@@ -14,18 +14,6 @@
 
 
 
-import { getRequestConfig } from "next-intl/server";
-import { notFound } from "next/navigation";
-import { locales, Locale } from "../i18n.configs"; // Locale tipini import qilamiz
-
-export default getRequestConfig(async ({ locale }: { locale: string }) => {
-    // locale'ni Locale tipiga tekshirish uchun type guard ishlatamiz
-    if (!locales.includes(locale as Locale)) notFound();
-
-    return {
-        messages: (await import(`./locales/${locale}.json`)).default,
-    };
-});
 
 
 // import { getRequestConfig } from "next-intl/server";
@@ -45,3 +33,38 @@ export default getRequestConfig(async ({ locale }: { locale: string }) => {
 //         messages: (await import(`./locales/${locale}.json`)).default,
 //     };
 // });
+
+
+
+
+
+
+// import { getRequestConfig } from "next-intl/server";
+// import { notFound } from "next/navigation";
+// import { locales, Locale } from "../i18n.configs"; // Locale tipini import qilamiz
+
+// export default getRequestConfig(async ({ locale }: { locale: string }) => {
+//     // locale'ni Locale tipiga tekshirish uchun type guard ishlatamiz
+//     if (!locales.includes(locale as Locale)) notFound();
+
+//     return {
+//         messages: (await import(`./locales/${locale}.json`)).default,
+//     };
+// });
+
+
+
+
+import { getRequestConfig } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { locales, Locale } from "../i18n.configs"; // Locale tipini import qilamiz
+
+export default getRequestConfig(async ({ locale }: { locale: string }) => {
+    // locale'ni Locale tipiga tekshirish uchun type guard ishlatamiz
+    if (!locales.includes(locale as Locale)) notFound();
+
+    return {
+        locale, // Bu qator qo'shildi
+        messages: (await import(`./locales/${locale}.json`)).default,
+    };
+});

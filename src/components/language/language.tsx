@@ -17,7 +17,8 @@ const LangSwitcher11 = ({
   const [lang, setLang] = useState(locale);
   const pathName = usePathname();
   const router = useRouter();
-  const langRef = useRef<HTMLDivElement>(null);
+  const langRef = useRef<HTMLDivElement>(null); 
+
   const langsList = ["uz", "en", "ru"];
   const reorderedLangsList = [
     locale,
@@ -39,7 +40,6 @@ const LangSwitcher11 = ({
     router.replace(pathName, { locale: locale });
   };
 
-
   const handleLocaleKeyDown = (
     event: React.KeyboardEvent<HTMLLIElement>,
     locale: Locale
@@ -49,6 +49,7 @@ const LangSwitcher11 = ({
     }
   };
 
+  // Yangilangan useClickOutside ishlatilmoqda
   useClickOutside(langRef, setOpen);
 
   return (
@@ -81,16 +82,14 @@ const LangSwitcher11 = ({
           />
         </div>
         <ul
-        className={cn(
-          "absolute  z-10 left-auto right-0 top-[30px] transition-all ease-in-out bg-bgColor flex flex-col gap-[6px] rounded-[8px] lg:text-[18px] lg:leading-[140%] text-md overflow-hidden" , 
-          {
-            "h-auto bg-[rgb(247,247,249)] max-h-[130px] px-[25px] py-[8px]": open,
-            "max-h-0 px-[0px] py-[0px]": !open,
-            "right-0 top-[30px]": type === "auth",
-          }
-        )}
-        
-        
+          className={cn(
+            "absolute z-10 left-auto right-0 top-[30px] transition-all ease-in-out bg-bgColor flex flex-col gap-[6px] rounded-[8px] lg:text-[18px] lg:leading-[140%] text-md overflow-hidden",
+            {
+              "h-auto bg-[rgb(247,247,249)] max-h-[130px] px-[25px] py-[8px]": open,
+              "max-h-0 px-[0px] py-[0px]": !open,
+              "right-0 top-[30px]": type === "auth",
+            }
+          )}
         >
           {reorderedLangsList.map((item, index) => (
             <li
@@ -108,13 +107,12 @@ const LangSwitcher11 = ({
               onKeyDown={(event) => handleLocaleKeyDown(event, item as Locale)}
               key={index}
             >
-
               {item === "uz" && (
                 <Image
                   src="/svgs/uzFlag.svg"
                   width={20}
                   height={20}
-                  alt="Uzbekistan flag"
+                  alt="O'zbekiston bayrog'i"
                 />
               )}
               {item === "ru" && (
@@ -122,7 +120,7 @@ const LangSwitcher11 = ({
                   src="/svgs/ruFlag.svg"
                   width={20}
                   height={20}
-                  alt="Russian flag"
+                  alt="Rossiya bayrog'i"
                 />
               )}
               {item === "en" && (
@@ -130,15 +128,15 @@ const LangSwitcher11 = ({
                   src="/svgs/enFlag.svg"
                   width={20}
                   height={20}
-                  alt="USA flag"
+                  alt="AQSh bayrog'i"
                 />
               )}
               <span
                 className={cn({
-                  "text-red-600": item === "en",  // USA - red
+                  "text-red-600": item === "en", 
                   "text-green-600": item === "uz", 
-                  "text-blue-600": item === "ru",  // Russia - blue 
-                  "font-interPrimary":true
+                  "text-blue-600": item === "ru", 
+                  "font-interPrimary": true,
                 })}
               >
                 {item}
