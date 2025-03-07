@@ -9,6 +9,7 @@ import SendRequest from '@/components/send-request/send-request'
 import Link from 'next/link'
 import FeedbackCustmer from '@/components/feedback/feedback';
 import NewsPage from '../../components/news/news';
+import Feedback1 from '@/components/feedback/feed';
 
 
 
@@ -24,6 +25,7 @@ const Page = () => {
         <FamouProduct />
         <AboutUs />
         {/* <FeedbackCustmer /> */}
+        <Feedback1/>
         <NewsPage />
         <SendRequest />
       </main>

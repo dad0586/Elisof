@@ -131,14 +131,10 @@
       transform: translateY(-50%);
   
       button {
-        // transform: rotate(-90deg);
         transition: transform 0.3s ease-in-out;
         writing-mode: sideways-lr;
       }
   
-      // &:hover button {
-      //   transform: rotate(-90deg) scale(1.05); 
-      // }
     }
   }
   
@@ -211,7 +207,6 @@
   
       .mini-img_container {
         gap: 5px;
-        // margin-top: 0;
   
         .mini-img_item {
           width: 60px;

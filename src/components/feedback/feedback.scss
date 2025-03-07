@@ -1,33 +1,71 @@
-.feedback {
-  text-align: center;
-  margin: 8% 0 3%;
+.feedback-card {
+  width: 100%;
+  padding: 15px;
+  border: 1.34px solid #d1d5db;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &_people {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+  &_name {
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size: 23px;
+    text-align: left;
+    color: #133240;
+  }
+
+  &_comment {
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 15px;
+    color: #133240;
+  }
 }
 
-.feedback-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 7%;
 
-  &_text {
-    h2 {
-      font-family: Federo;
-      font-weight: 400;
-      font-size: 42.78px;
-      line-height: 50.4px;
-      letter-spacing: 2%;
-      color: rgba(39, 39, 39, 1);
-    }
 
-    p {
-      font-family: Gilroy;
-      font-weight: 400;
-      font-size: 26px;
-      line-height: 31.2px;
-      letter-spacing: 2%;
-      color: rgba(19, 50, 64, 1);
-      text-align: left;
-      margin-top: 3%;
+.feedback {
+  text-align: center;
+  margin: 8% 0 3% 0;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7%;
+
+    &_text {
+      h2 {
+        font-family: Federo;
+        font-weight: 400;
+        font-size: 42.78px;
+        line-height: 50.4px;
+        letter-spacing: 2%;
+        color: rgba(39, 39, 39, 1);
+      }
+
+      p {
+        font-family: Gilroy;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 31.2px;
+        letter-spacing: 2%;
+        color: rgba(19, 50, 64, 1);
+        text-align: left;
+        margin-top: 3%;
+      }
     }
   }
 }
@@ -44,12 +82,6 @@
   border-radius: 5px;
   background-color: inherit;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
-}
-
-.feedback-header_previous:hover,
-.feedback-header_next:hover {
-  background-color: rgba(29, 81, 71, 0.1);
 }
 
 .feedback-header_next {
@@ -57,89 +89,46 @@
   color: rgba(255, 255, 255, 1);
 }
 
-
 .feedback-carousel {
   width: 100%;
-  position: relative;
+  max-width: 1110px;
   overflow: hidden;
-}
-.feedback-carousel1 {
-  width: 100%;
-  overflow: hidden;
+  margin: 3% auto;
   position: relative;
-  margin-left: 13%;
 }
-
-
-
 
 .carousel-track {
   display: flex;
+  transition: transform 0.8s ease-in-out;
   gap: 10px;
 }
 
 .testimonial-card {
-  flex: 0 0 calc(100% / 2.5); 
-
+  flex: 0 0 calc(100% / 2.5);
   background: #fff;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: left;
-  transition: transform 0.3s ease; 
-}
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
-
-
-.testimonial-card:hover {
-  transform: scale(1.02);
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-
-  img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; 
-    object-fit: cover;
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
   }
-}
 
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-@media (min-width: 1500px) {
-  
-  .testimonial-card {
-    flex: 0 0 calc(100% / 4); 
-  }
-  .feedback-carousel1 {
-    margin-left: 15%;
-  }
-}
-
-@media (min-width: 1800px) {
-  
-  .feedback-carousel1 {
-    margin-left: 25%;
-  }
-}
-@media (min-width: 2200px) {
-  
-  .feedback-carousel1 {
-    margin-left: 30%;
-  }
-}
-@media (min-width: 2700px) {
-  
-  .feedback-carousel1 {
-    margin-left: 35%;
-  }
-}
-@media (min-width: 3000px) {
-  
-  .feedback-carousel1 {
-    margin-left: 40%;
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
   }
 }
 
@@ -147,21 +136,18 @@
   .testimonial-card {
     flex: 0 0 calc(100% / 2);
   }
-  .feedback-carousel1 {
-    margin-left: 7%;
-  }
 }
 
 @media (max-width: 768px) {
   .feedback-carousel {
-    width: 90%;
-  }
-  .feedback-carousel1 {
-    margin-left: 15%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
   }
 
   .testimonial-card {
-    flex: 0 0 calc(100% / 1);
+    flex: 0 0 100%;
+
   }
 
   .feedback-header {
@@ -186,12 +172,9 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .feedback-carousel {
-    width: 90%;
-  }
-  .feedback-carousel1 {
-    margin-left: 0;
+    width: 100%;
   }
 
   .feedback-header {
@@ -214,6 +197,7 @@
     .card-header {
       flex-direction: column;
       align-items: center;
+      gap: 10px;
 
       img {
         width: 60px;
