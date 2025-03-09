@@ -2,20 +2,20 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./navbar.scss";
 import { useTranslations } from "next-intl";
 import { Locale } from "../../../i18n.configs";
 import LangSwitcher11 from "../language/language";
 import { MdOutlineCancel } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = ({ locale }: { locale: Locale }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const t = useTranslations("navbar");
 
   const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
-    document.body.style.overflow = menuOpen ? "auto" : "hidden";
+    setMenuOpen((prev) => !prev);
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -34,8 +34,14 @@ const Navbar = ({ locale }: { locale: Locale }) => {
       }
     }
     setMenuOpen(false);
-    document.body.style.overflow = "auto";
   };
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   return (
     <header>
@@ -63,12 +69,10 @@ const Navbar = ({ locale }: { locale: Locale }) => {
               </div>
 
               <div className="burger-menu md:w-auto" onClick={handleMenuToggle}>
-                {!menuOpen && (
-                  <>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </>
+                {menuOpen ? (
+                  <RxHamburgerMenu className="text-2xl" />
+                ) : (
+                  <RxHamburgerMenu className="text-2xl" />
                 )}
               </div>
             </div>
@@ -77,7 +81,9 @@ const Navbar = ({ locale }: { locale: Locale }) => {
           {menuOpen && (
             <div className="burger-dropdown">
               <nav>
-                <span className="close-icon" onClick={handleMenuToggle}><MdOutlineCancel /></span>
+                <span className="close-icon" onClick={handleMenuToggle}>
+                  <MdOutlineCancel />
+                </span>
                 <Link href="/" onClick={handleLinkClick}>{t("home")}</Link>
                 <Link href="#product" onClick={handleLinkClick}>{t("products")}</Link>
                 <Link href="#about-us" onClick={handleLinkClick}>{t("about_us")}</Link>

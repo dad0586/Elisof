@@ -38,6 +38,8 @@
     justify-content: flex-end;
     align-items: center;
     gap: 15px;
+    position: relative; 
+    z-index: 1000;
   }
 
   .language-selector {
@@ -54,11 +56,10 @@
     display: none;
     cursor: pointer;
 
-    span {
+    svg {
       width: 25px;
-      height: 3px;
-      background-color: #272727;
-      margin: 5px;
+      height: 25px;
+      color: #272727;
       transition: 0.3s;
     }
   }
@@ -66,8 +67,8 @@
 
 .burger-dropdown {
   position: absolute;
-  top: 55px;
-  right: 7px;
+  top: 60px; 
+  right: 10px;
   width: 200px;
   background: white;
   border-radius: 10px;
@@ -76,7 +77,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 999;
+  z-index: 999; 
 
   nav {
     display: flex;
@@ -88,14 +89,14 @@
     font-size: 24px;
     color: #272727;
     cursor: pointer;
-    text-align: right; 
+    text-align: right;
     transition: color 0.3s ease-in-out;
     position: absolute;
     right: 5px;
     top: 5px;
 
     &:hover {
-      color: #0070f3; 
+      color: #0070f3;
     }
   }
 
@@ -126,7 +127,7 @@
 
     .burger-menu {
       display: flex;
-      flex-direction: column;
+      align-items: center;
     }
   }
 

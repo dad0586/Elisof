@@ -1,6 +1,6 @@
 "use client"; 
 import Link from "next/link";
-import "./footer.scss"
+import "./footer.scss";
 import { LuInstagram } from "react-icons/lu";
 import { PiTelegramLogo } from "react-icons/pi";
 import { BsTelephone } from "react-icons/bs";
@@ -8,20 +8,24 @@ import { CiLocationOn } from "react-icons/ci";
 import { useTranslations } from "next-intl";
 
 const Footer = () => {
-
-
-    const t = useTranslations("footer")
+    const t = useTranslations("footer");
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            const navbarHeight = document.querySelector(".fixed")?.getBoundingClientRect().height || 0;
+            const extraOffset = 10;
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
+
+            window.scrollTo({
+                top: elementPosition,
+                behavior: "smooth",
+            });
         }
     };
 
-
     return (
-        <footer >
+        <footer>
             <div className="footer" id="footerId">
                 <div className="myContainer">
                     <div className="footer-container">
@@ -53,7 +57,7 @@ const Footer = () => {
                         <div className="footer-section">
                             <h3>{t("location")}</h3>
                             <ul>
-                                <Link href="#998456678899">
+                                <Link href="tel:+998456678899">
                                     <li className="footer_icon-follow"> <BsTelephone />  +998 45 667 88 99</li>
                                 </Link>
                                 <Link href="https://maps.app.goo.gl/B7ZxDMSewXa3fx6r8" target="_blank">
