@@ -15,6 +15,7 @@ const LangSwitcher11 = ({
 }) => {
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState(locale);
+  
   const pathName = usePathname();
   const router = useRouter();
   const langRef = useRef<HTMLDivElement>(null); 
