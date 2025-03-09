@@ -49,7 +49,7 @@ const MySwiper = () => {
                 <div className="main-swiper myContainer">
                   <div className="main-swiper_img">
                     <Image
-                      src="/image.png"
+                      src="/imgs/image.png"
                       alt="T-shirts"
                       width={600}
                       height={450}
