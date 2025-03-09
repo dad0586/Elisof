@@ -35,7 +35,7 @@ const SendRequest = () => {
               id="email"
               placeholder={t("email")}
             />
-            <div>
+            <div className="send-request_phoneInput">
               <PhoneInput
                 country={"uz"}
                 value={phone}

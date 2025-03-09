@@ -21,7 +21,7 @@ const Card = () => {
               alt={t("product_name")}
               width={223}
               height={223}
-              className="product-image"
+              className="seller-card-product-image"
             />
           </div>
           <p className="best-seller-card_text">{t("product_name")}</p>
