@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     object-fit: cover;
+    image-rendering: crisp-edges;
   }
 
   .navbar {
