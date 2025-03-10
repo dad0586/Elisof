@@ -23,6 +23,7 @@ const MySwiper = () => {
               navigation
               autoplay={{ delay: 3000 }}
               loop={true}
+              className="main-swiper_navigation"
             >
               <SwiperSlide>
                 <div className="main-swiper myContainer">

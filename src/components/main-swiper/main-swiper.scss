@@ -4,6 +4,12 @@
     position: relative;
     overflow: hidden;
 }
+.main-swiper_navigation  .swiper-button-next,
+.main-swiper_navigation  .swiper-button-prev {
+    color: #797979;
+}
+   
+
 
 .main-swiper {
     width: 80%;
@@ -11,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    gap: 20px; // Elementlar orasida bo‘sh joy
+    gap: 20px; 
     padding: 20px 0;
 }
 

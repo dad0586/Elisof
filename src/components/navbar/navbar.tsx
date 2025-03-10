@@ -33,7 +33,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
         });
       }
     }
-    setMenuOpen(false);
+    setMenuOpen(true);
   };
 
   useEffect(() => {
