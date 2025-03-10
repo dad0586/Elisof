@@ -10,6 +10,20 @@ const SendRequest = () => {
   const t = useTranslations("SendRequest");
   const [phone, setPhone] = useState<string>("");
 
+  const [firstName, setFirstName] = useState<string>('');
+  const [lastName, setLastName] = useState<string>('');
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    setter: React.Dispatch<React.SetStateAction<string>>
+  ) => {
+    const value = e.target.value;
+    const filteredValue = value.replace(/[^A-Za-z]/g, '');
+    if (filteredValue.length <= 20) {
+      setter(filteredValue);
+    }
+  };
+
   return (
     <section>
       <div className="myContainer">
@@ -22,13 +36,23 @@ const SendRequest = () => {
             <Image
               src="/imgs/image.png"
               alt="Send Request img"
-              width={650} 
-              height={650} 
+              width={650}
+              height={650}
             />
           </div>
           <div className="send-request-inputs">
-            <input type="text" id="name" placeholder={t("name")} />
-            <input type="text" id="secondname" placeholder={t("secondname")} />
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => handleInputChange(e, setFirstName)}
+              id="name"
+              placeholder={t("name")} />
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => handleInputChange(e, setLastName)}
+              id="secondname"
+              placeholder={t("secondname")} />
             <input
               className="send-request-email"
               type="email"
