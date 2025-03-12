@@ -83,8 +83,12 @@
     font-size: 42.78px;
     line-height: 100%;
     letter-spacing: 2%;
-    text-align: center;
     color: #272727;
+    
+    @media (max-width: 500px) {
+      font-weight: 300;
+      font-size: 35px;
+    }
   }
 
   p {
@@ -95,5 +99,11 @@
     letter-spacing: 2%;
     color: #133240;
     margin: 2% 0 3% 0;
+
+    @media (max-width: 500px) {
+      font-weight: 300;
+      font-size: 28px;
+      margin: 3% 0 5% 0;
+    }
   }
 }

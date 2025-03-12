@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./navbar.scss";
 import { useTranslations } from "next-intl";
 import { Locale } from "../../../i18n.configs";
@@ -12,6 +12,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = ({ locale }: { locale: Locale }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("navbar");
 
   const handleMenuToggle = () => {
@@ -37,9 +38,27 @@ const Navbar = ({ locale }: { locale: Locale }) => {
   };
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
     return () => {
       document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [menuOpen]);
 
@@ -69,17 +88,13 @@ const Navbar = ({ locale }: { locale: Locale }) => {
               </div>
 
               <div className="burger-menu md:w-auto" onClick={handleMenuToggle}>
-                {menuOpen ? (
-                  <RxHamburgerMenu className="text-2xl" />
-                ) : (
-                  <RxHamburgerMenu className="text-2xl" />
-                )}
+                <RxHamburgerMenu className="text-2xl" />
               </div>
             </div>
           </div>
 
           {menuOpen && (
-            <div className="burger-dropdown">
+            <div className="burger-dropdown" ref={menuRef}>
               <nav>
                 <span className="close-icon" onClick={handleMenuToggle}>
                   <MdOutlineCancel />

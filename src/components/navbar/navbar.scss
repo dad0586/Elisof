@@ -7,7 +7,7 @@
     flex: 1;
     display: flex;
     align-items: center;
-    object-fit: cover;
+    object-fit: contain;
     image-rendering: crisp-edges;
   }
 
@@ -129,7 +129,7 @@
       a{
         img{
           width: 100%;
-          height: 75px;
+          height: 80px;
         }
       }
     }
