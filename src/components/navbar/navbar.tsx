@@ -69,7 +69,7 @@ const Navbar = ({ locale }: { locale: Locale }) => {
           <div className="main-navbar_header">
             <div className="main-logo">
               <Link href="/" onClick={handleLinkClick}>
-                <Image className="main-logo_img logo" src="/svgs/logo.svg" alt="Logo" width={130} height={100} style={{ objectFit: 'contain' }} />
+                <Image className="main-logo_img logo" src="/imgs/logo1.jpg" alt="Logo" width={130} height={100} style={{ objectFit: 'contain' }} />
               </Link>
             </div>
 
