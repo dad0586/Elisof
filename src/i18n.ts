@@ -57,14 +57,13 @@
 
 import { getRequestConfig } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { locales, Locale } from "../i18n.configs"; // Locale tipini import qilamiz
+import { locales, Locale } from "../i18n.configs";
 
 export default getRequestConfig(async ({ locale }: { locale: string }) => {
-    // locale'ni Locale tipiga tekshirish uchun type guard ishlatamiz
     if (!locales.includes(locale as Locale)) notFound();
 
     return {
-        locale, // Bu qator qo'shildi
+        locale,
         messages: (await import(`./locales/${locale}.json`)).default,
     };
 });
