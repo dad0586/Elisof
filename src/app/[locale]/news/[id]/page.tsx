@@ -31,7 +31,7 @@ export default async function NewsDetailPage({
   params: Promise<{ locale: Locale; id: string }>;
 }) {
   const resolvedParams = await params;
-  const { locale, id } = resolvedParams;
+  const { id } = resolvedParams;
 
   const news = newsData.find((item) => item.id === id);
 
