@@ -8,8 +8,7 @@
     margin-top: 5%;
     text-align: center;
 
-
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
         font-weight: 300;
         font-size: 35px;
     }
@@ -25,7 +24,7 @@
     margin-top: 1%;
     text-align: center;
 
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
         font-weight: 300;
         font-size: 30px;
     }
@@ -39,35 +38,51 @@
     gap: 20px;
 }
 
+// .send-request-img {
+//     height: 500px;
+     
+//     img {
+//         height: 100%;
+//     }
+// }
+
 .send-request-inputs {
     width: 38%;
     display: flex;
     flex-direction: column;
-    gap: 2%;
 
     @media (max-width: 1080px) {
         width: 65%;
-        
-        input {
-            margin-top: 12px
-        }
     }
 
     @media (max-width: 768px) {
         width: 95%;
     }
-    
+
+
+    .input-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 15px; 
+    }
+
     input {
         border-radius: 8px;
         border: 1px solid rgb(225, 218, 218);
-        height: 58px;
+        height: 55px;
         font-family: Gilroy;
         font-weight: 400;
         font-size: 16px;
         line-height: 19.2px;
         letter-spacing: 0%;
         color: rgba(39, 39, 39, 1);
-        padding: 8px 16px;
+        // padding: 8px 16px;
+        box-sizing: border-box;
+        width: 100%;
+
+        @media (max-width: 1080px) {
+            margin-top: 0;
+        }
     }
 
     .send-request-email {
@@ -77,30 +92,62 @@
         line-height: 19.2px;
         letter-spacing: 0%;
         color: rgba(119, 119, 119, 1);
-        margin-bottom: 2%;
+    }
+
+    .error-text {
+        color: red;
+        font-size: 12px;
+        position: absolute;
+        bottom: -15px; 
+        left: 8px; 
+        margin: 0;
+    }
+
+    .send-request_phoneInput {
+        position: relative;
+        width: 100%;
+        margin-bottom: 15px;
+
+        .react-tel-input {
+            .form-control {
+                width: 100%;
+                height: 58px;
+                font-size: 16px;
+                border-radius: 8px;
+                border: 1px solid rgb(225, 218, 218);
+                padding: 8px 16px 8px 48px; 
+                box-sizing: border-box;
+            }
+
+            .flag-dropdown {
+                background: transparent;
+                border: 1px solid rgb(225, 218, 218);
+                border-radius: 8px 0 0 8px;
+            }
+        }
     }
 
     .send-request-description {
         width: 100%;
-        height: 138px;
-        padding: 12px;
+        height: 120px;
         font-size: 16px;
+        font-family: Gilroy;
         border: 1px solid rgb(225, 218, 218);
         border-radius: 8px;
         background-color: inherit;
-        resize: none; 
+        resize: none;
         transition: border-color 0.3s, box-shadow 0.3s;
         text-align: start;
 
-        @media (max-width: 1080px) {
-            margin-top: 12px;
+        &:focus {
+            border: 1px solid rgb(225, 218, 218);
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
         }
-    }
 
-    .send-request-description:focus {
-        border: 1px solid rgb(225, 218, 218);
-        outline: none;
-        box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+        @media (max-width: 1080px) {
+            margin-top: 0;
+        }
     }
 
     button {
@@ -113,16 +160,12 @@
         line-height: 24.26px;
         letter-spacing: 0%;
         text-align: center;
-        padding: 17px 16px;
+        padding: 15px;
         border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
 
-        @media (max-width: 1080px) {
-            margin-top: 12px;
-        }
+        
     }
-}
-
-.send-request-email {
-    width: 100%;
-    margin-top: 2%;
 }

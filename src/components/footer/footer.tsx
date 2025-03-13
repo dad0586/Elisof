@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import Link from "next/link";
 import "./footer.scss";
 import { LuInstagram } from "react-icons/lu";
@@ -6,6 +6,7 @@ import { PiTelegramLogo } from "react-icons/pi";
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
     const t = useTranslations("footer");
@@ -23,6 +24,13 @@ const Footer = () => {
             });
         }
     };
+
+
+    const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
     return (
         <footer>
@@ -67,7 +75,13 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="footer-bottom"> {t("footer_bottom")} </div>
+                <div className="footer-bottom">
+                    <span>
+                        {t("footer_bottom_newDate")} {currentYear}
+                        <Link href="https://dynamicsoft.uz/en" target="_blank"> {t("footer_bottom_link")} </Link>
+                        {t("footer_bottom")}
+                    </span>
+                </div>
             </div>
         </footer>
     );

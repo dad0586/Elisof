@@ -36,7 +36,6 @@
     "names": "Floyd Miles",
     "comment": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..."
   },
-  
   "feedback": {
     "customers-feedback": "Customers' Feedback",
     "our-trust": "Our customers trust us",
@@ -68,15 +67,22 @@
   "News": {
     "title": "News"
   },
-
   "SendRequest": {
-    "title": "Send request",
-    "description": "We will contact soon",
-    "name":"Your First and Second name ",
-    "secondname":"Your Last Name",
-    "email":"Your Email Address",
-    "request":"Write your request...",
-    "button": "Send request"
+    "title": "Send Request",
+    "description": "Please fill out the form below to send your request.",
+    "name": "First Name",
+    "secondname": "Last Name",
+    "email": "Email",
+    "request": "Your Request",
+    "button": "Submit",
+    "nameLengthError": "Must be at least 3 characters",
+    "lastNameLengthError": "Last name must be at least 3 characters",
+    "emailError": "Email must contain @ symbol",
+    "successMessage": "Request sent successfully!",
+    "errorMessage": "Failed to send request. Try again.",
+    "phoneLengthError": "Phone number must be complete"
+
+
   },
   "footer": {
     "home": "Home",
@@ -90,6 +96,8 @@
     "telegram": "Telegram",
     "location": "Location",
     "location_address": "Buyuk Ipak yo‘li, 156B",
-    "footer_bottom": "© Copyright 2025 | Dynamicsoft | All rights reserved."
+    "footer_bottom_newDate": "© Copyright ",
+    "footer_bottom_link": "| Dynamicsoft |",
+    "footer_bottom": " All rights reserved."
   }
 }

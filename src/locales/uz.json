@@ -68,13 +68,19 @@
     "title": "Yangiliklar"
   },
   "SendRequest": {
-    "title": "So'rov yuborish",
-    "description": "Tez orada bog'lanamiz",
-    "name":"Sizning ismingiz",
-    "secondname":"Sizning familiyangiz",
-    "email":"Sizning email adresingiz",
-    "request":"Arizangizni yozing...",
-    "button": "So'rov yuborish"
+    "title": "So‘rov yuborish",
+    "description": "So‘rov yuborish uchun quyidagi formani to‘ldiring.",
+    "name": "Ism",
+    "secondname": "Familiya",
+    "email": "Email",
+    "request": "Sizning so‘rovingiz",
+    "button": "Yuborish",
+    "nameLengthError": "Kamida 3 ta harfdan iborat bo‘lishi kerak",
+    "lastNameLengthError": "Familiya kamida 3 ta harfdan iborat bo‘lishi kerak",
+    "emailError": "Emailda @ belgisi bo‘lishi kerak",
+    "successMessage": "So‘rov muvaffaqiyatli yuborildi!",
+    "errorMessage": "So‘rovni yuborishda xatolik yuz berdi. Qayta urinib ko‘ring.",
+    "phoneLengthError": "Telefon raqami to'liq bo'lishi kerak"
   },
   "footer": {
     "home": "Bosh sahifa",
@@ -88,6 +94,8 @@
     "telegram": "Telegram",
     "location": "Manzil",
     "location_address": "Buyuk Ipak yo‘li, 156B",
-    "footer_bottom": "© Copyright 2025 | Dynamicsoft | All rights reserved."
+    "footer_bottom_newDate": "© Copyright ",
+    "footer_bottom_link": "| Dynamicsoft |",
+    "footer_bottom": " All rights reserved."
   }
 }
